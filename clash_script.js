@@ -312,10 +312,6 @@ function main(config) {
   const rules = [
     "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
     "RULE-SET,Baa_System,DIRECT,no-resolve",
-    "DST-PORT,3478,REJECT,no-resolve",
-    "DST-PORT,19302,REJECT,no-resolve",
-    "DST-PORT,3479,REJECT,no-resolve",
-    "DST-PORT,19305,REJECT,no-resolve",
     "RULE-SET,Baa_USA,Ai智能",
     "RULE-SET,BilibiliHMT,番剧出差",
     "RULE-SET,Privacy,隐私保护",

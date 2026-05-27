@@ -9,3 +9,7 @@ payload:
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - DST-PORT,3478,REJECT,no-resolve
+  - DST-PORT,19302,REJECT,no-resolve
+  - DST-PORT,3479,REJECT,no-resolve
+  - DST-PORT,19305,REJECT,no-resolve
