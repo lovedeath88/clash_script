@@ -33,6 +33,13 @@ function main(config) {
   config["proxy-groups"] = [
     {
       ...groupBaseOption,
+      "name": "Ai智能",
+      "type": "select",
+      "proxies": ["关闭代理", "开启代理", "🇺🇸美国测速⚡", "🇺🇸美国手动"],
+      "icon": "https://raw.githubusercontent.com/Aworld00/Clash/refs/heads/main/Icon/America.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "开启代理",
       "type": "select",
       "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇯🇵日本测速⚡", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇭🇰香港手动", "🇺🇸美国手动", "🇯🇵日本手动", "🇹🇼台湾手动"],
@@ -276,14 +283,20 @@ function main(config) {
     "Baa_CN": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Aworld00/Clash/refs/heads/main/Rules/Baa_CN.yaml",
-      "path": "./ruleset/Lovedeath/Baa_CN.yaml"
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_CN.yaml",
+      "path": "./Rules/Baa_CN.yaml"
     },
     "Baa_Agent": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Aworld00/Clash/refs/heads/main/Rules/Baa_Agent.yaml",
-      "path": "./ruleset/Lovedeath/Baa_Agent.yaml"
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_Agent.yaml",
+      "path": "./Rules/Baa_Agent.yaml"
+    },
+    "Baa_USA": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_USA.yaml",
+      "path": "./Rules/Baa_USA.yaml"
     },
   };
 
@@ -304,6 +317,7 @@ function main(config) {
     "DST-PORT,3479,REJECT,no-resolve",
     "DST-PORT,19305,REJECT,no-resolve",
     "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
+    "RULE-SET,Baa_USA,Ai智能",
     "RULE-SET,BilibiliHMT,番剧出差",
     "RULE-SET,Privacy,隐私保护",
     "RULE-SET,SteamCN,国内_Game",
