@@ -36,7 +36,7 @@ function main(config) {
       "name": "Ai智能",
       "type": "select",
       "proxies": ["关闭代理", "开启代理", "🇺🇸美国测速⚡", "🇺🇸美国手动"],
-      "icon": "https://raw.githubusercontent.com/Aworld00/Clash/refs/heads/main/Icon/America.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ai.png"
     },
     {
       ...groupBaseOption,
@@ -283,19 +283,19 @@ function main(config) {
     "Baa_CN": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_CN.yaml",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_CN.yaml",
       "path": "./Rules/Baa_CN.yaml"
     },
     "Baa_Agent": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_Agent.yaml",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_Agent.yaml",
       "path": "./Rules/Baa_Agent.yaml"
     },
     "Baa_USA": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/main/Rules/Baa_USA.yaml",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_USA.yaml",
       "path": "./Rules/Baa_USA.yaml"
     },
   };
