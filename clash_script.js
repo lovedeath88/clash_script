@@ -301,8 +301,9 @@ function main(config) {
       "path": "./Rules/Baa_USA.yaml"
     },
     "Baa_System": {
-      "type": "file",
+      ...ruleProviderCommon,
       "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_System.yaml",
       "path": "./Rules/Baa_System.yaml"
     },
   };
