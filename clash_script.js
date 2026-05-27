@@ -35,7 +35,9 @@ function main(config) {
       ...groupBaseOption,
       "name": "Ai智能",
       "type": "select",
-      "proxies": ["关闭代理", "开启代理", "🇺🇸美国测速⚡", "🇺🇸美国手动"],
+      "include-all": true,
+      "filter": "(?i)^(?=.*(?:US|us|🇺🇸|America|美国))(?!.*(?:倍|流量|x)).*$",
+      "proxies": ["关闭代理", "开启代理", "🇺🇸美国测速⚡"],
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ai.png"
     },
     {
@@ -298,25 +300,21 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_USA.yaml",
       "path": "./Rules/Baa_USA.yaml"
     },
+    "Baa_System": {
+      "type": "file",
+      "behavior": "classical",
+      "path": "./Rules/Baa_System.yaml"
+    },
   };
 
   // 规则列表（按优先级排序）
   const rules = [
-    "DOMAIN-SUFFIX,local,DIRECT",
-    "IP-CIDR,127.0.0.0/8,DIRECT,no-resolve",
-    "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve",
-    "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
-    "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve",
-    "IP-CIDR,100.64.0.0/10,DIRECT,no-resolve",
-    "IP-CIDR6,::1/128,DIRECT,no-resolve",
-    "IP-CIDR6,fc00::/7,DIRECT,no-resolve",
-    "IP-CIDR6,fe80::/10,DIRECT,no-resolve",
-    "IP-CIDR6,fd00::/8,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
+    "RULE-SET,Baa_System,DIRECT,no-resolve",
     "DST-PORT,3478,REJECT,no-resolve",
     "DST-PORT,19302,REJECT,no-resolve",
     "DST-PORT,3479,REJECT,no-resolve",
     "DST-PORT,19305,REJECT,no-resolve",
-    "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
     "RULE-SET,Baa_USA,Ai智能",
     "RULE-SET,BilibiliHMT,番剧出差",
     "RULE-SET,Privacy,隐私保护",
