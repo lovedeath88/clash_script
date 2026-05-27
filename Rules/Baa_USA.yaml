@@ -1,0 +1,9 @@
+payload:
+# > 美国一些网站，专用节点
+  - DOMAIN-SUFFIX,claude.com #Claude
+  - DOMAIN-SUFFIX,claude.ai #Claude
+  - DOMAIN-SUFFIX,genspark.ai #Genspark
+# > - DOMAIN-SUFFIX,chatgpt.com #GPT
+  - DOMAIN-SUFFIX,openclaw.ai #龙虾
+  - DOMAIN-SUFFIX,flowith.io #flowith
+  - DOMAIN-SUFFIX,krea.ai #krea
