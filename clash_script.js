@@ -37,7 +37,7 @@ function main(config) {
       "type": "select",
       "include-all": true,
       "filter": "(?i)^(?=.*(?:US|us|🇺🇸|America|美国))(?!.*(?:倍|流量|x)).*$",
-      "proxies": ["关闭代理", "开启代理", "🇺🇸美国测速⚡"],
+      "proxies": ["🇺🇸美国测速⚡", "关闭代理", "开启代理", "🇯🇵日本手动", "🇹🇼台湾手动"],
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ai.png"
     },
     {

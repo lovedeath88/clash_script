@@ -1,9 +1,81 @@
 payload:
-# > 美国一些网站，专用节点
-  - DOMAIN-SUFFIX,claude.com #Claude
-  - DOMAIN-SUFFIX,claude.ai #Claude
-  - DOMAIN-SUFFIX,genspark.ai #Genspark
-# > - DOMAIN-SUFFIX,chatgpt.com #GPT
-  - DOMAIN-SUFFIX,openclaw.ai #龙虾
-  - DOMAIN-SUFFIX,flowith.io #flowith
-  - DOMAIN-SUFFIX,krea.ai #krea
+# > AI 对话
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,chat.openai.com
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,platform.openai.com
+  - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,poe.com
+  - DOMAIN-SUFFIX,character.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,aistudio.google.com
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,you.com
+  - DOMAIN-SUFFIX,inflection.ai
+  - DOMAIN-SUFFIX,pi.ai
+# > AI 图像生成
+  - DOMAIN-SUFFIX,midjourney.com
+  - DOMAIN-SUFFIX,ideogram.ai
+  - DOMAIN-SUFFIX,leonardo.ai
+  - DOMAIN-SUFFIX,stability.ai
+  - DOMAIN-SUFFIX,dalle.com
+  - DOMAIN-SUFFIX,firefly.adobe.com
+  - DOMAIN-SUFFIX,openclaw.ai
+  - DOMAIN-SUFFIX,krea.ai
+  - DOMAIN-SUFFIX,clipdrop.co
+  - DOMAIN-SUFFIX,getimg.ai
+  - DOMAIN-SUFFIX,playgroundai.com
+  - DOMAIN-SUFFIX,tensor.art
+  - DOMAIN-SUFFIX,mage.space
+# > AI 视频生成
+  - DOMAIN-SUFFIX,runwayml.com
+  - DOMAIN-SUFFIX,pika.art
+  - DOMAIN-SUFFIX,genspark.ai
+  - DOMAIN-SUFFIX,synthesia.io
+  - DOMAIN-SUFFIX,heygen.com
+  - DOMAIN-SUFFIX,veed.io
+  - DOMAIN-SUFFIX,vidnoz.com
+# > AI 音乐/音频
+  - DOMAIN-SUFFIX,suno.ai
+  - DOMAIN-SUFFIX,elevenlabs.io
+  - DOMAIN-SUFFIX,udio.com
+  - DOMAIN-SUFFIX,musicfy.live
+  - DOMAIN-SUFFIX,mubert.com
+  - DOMAIN-SUFFIX,voicemod.net
+# > AI 模型/开发平台
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,replicate.com
+  - DOMAIN-SUFFIX,civitai.com
+  - DOMAIN-SUFFIX,kaggle.com
+  - DOMAIN-SUFFIX,github.dev
+  - DOMAIN-SUFFIX,gitpod.io
+  - DOMAIN-SUFFIX,codesandbox.io
+  - DOMAIN-SUFFIX,gradio.app
+  - DOMAIN-SUFFIX,modal.com
+  - DOMAIN-SUFFIX,banana.dev
+  - DOMAIN-SUFFIX,replit.com
+# > AI 写作/办公
+  - DOMAIN-SUFFIX,notion.site
+  - DOMAIN-SUFFIX,notion.ai
+  - DOMAIN-SUFFIX,grammarly.com
+  - DOMAIN-SUFFIX,jasper.ai
+  - DOMAIN-SUFFIX,rytr.me
+  - DOMAIN-SUFFIX,writesonic.com
+  - DOMAIN-SUFFIX,copy.ai
+  - DOMAIN-SUFFIX,quillbot.com
+  - DOMAIN-SUFFIX,flowith.io
+  - DOMAIN-SUFFIX,gamma.app
+  - DOMAIN-SUFFIX,tome.app
+  - DOMAIN-SUFFIX,beautiful.ai
+  - DOMAIN-SUFFIX,deepl.com
+# > AI 搜索
+  - DOMAIN-SUFFIX,consensus.app
+  - DOMAIN-SUFFIX,scispace.com
+  - DOMAIN-SUFFIX,elicit.com
+  - DOMAIN-SUFFIX,semanticscholar.org
