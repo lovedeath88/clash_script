@@ -201,8 +201,8 @@ function main(config) {
     "reject": {
       ...ruleProviderCommon,
       "behavior": "domain",
-      "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-      "path": "./ruleset/loyalsoldier/reject.yaml"
+      "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml",
+      "path": "./ruleset/anti-AD/anti-ad-clash.yaml"
     },
     "applications": {
       ...ruleProviderCommon,
@@ -312,15 +312,15 @@ function main(config) {
   const rules = [
     "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
     "RULE-SET,Baa_System,DIRECT,no-resolve",
+    "RULE-SET,reject,广告拦截",
+    "RULE-SET,Privacy,隐私保护",
     "RULE-SET,Baa_USA,Ai智能",
     "RULE-SET,BilibiliHMT,番剧出差",
-    "RULE-SET,Privacy,隐私保护",
     "RULE-SET,SteamCN,国内_Game",
     "RULE-SET,Epic,国内_Game",
     "RULE-SET,Game,国外_Game",
     "RULE-SET,Baa_CN,关闭代理",
     "RULE-SET,Baa_Agent,国外网站",
-    "RULE-SET,reject,广告拦截",
     "RULE-SET,applications,关闭代理,no-resolve",
     "RULE-SET,GFW,开启代理",
     "RULE-SET,Proxy,开启代理",
