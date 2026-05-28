@@ -99,22 +99,47 @@ payload:
   - DOMAIN-SUFFIX,shimo.im #石墨文档
   - DOMAIN-SUFFIX,badjs.weixinbridge.com #微信公众号文章
 # > 在线生图Ai平台
-  - DOMAIN-SUFFIX,chatglm.cn #智谱清言
   - DOMAIN-SUFFIX,liblib.art #哩布哩布AI
   - DOMAIN-SUFFIX,runninghub.cn #RH平台ai
   - DOMAIN-SUFFIX,haiyi.art #海艺AI
   - DOMAIN-SUFFIX,jimeng.jianying.com #即梦AI
   - DOMAIN-SUFFIX,jiazuo.taobao.com #家作（家装类型）
   - DOMAIN-SUFFIX,designkit.com #美图设计室
-  - DOMAIN-SUFFIX,app.klingai.com #可灵AI
+  - DOMAIN-SUFFIX,klingai.com #可灵AI
   - DOMAIN-SUFFIX,d.design #堆友
-# > 回答AI平台
+# > 国内AI模型
+  - DOMAIN-SUFFIX,deepseek.com #DeepSeek
   - DOMAIN-SUFFIX,yuanbao.tencent.com #腾讯元宝
-  - DOMAIN-SUFFIX,tongyi.aliyun.com #通义
-  - DOMAIN-SUFFIX,bangong.360.cn #苏打办公
-  - DOMAIN-SUFFIX,chat.deepseek.com #Deepseek
   - DOMAIN-SUFFIX,doubao.com #豆包
+  - DOMAIN-SUFFIX,tongyi.aliyun.com #通义千问
+  - DOMAIN-SUFFIX,moonshot.cn #月之暗面/Kimi
+  - DOMAIN-SUFFIX,kimi.com #Kimi开发平台
+  - DOMAIN-SUFFIX,yiyan.baidu.com #文心一言
+  - DOMAIN-SUFFIX,xinghuo.xfyun.cn #讯飞星火
+  - DOMAIN-SUFFIX,tiangong.cn #天工AI
+  - DOMAIN-SUFFIX,stepfun.com #阶跃星辰
   - DOMAIN-SUFFIX,qianwen.com #千问
+  - DOMAIN-SUFFIX,chatglm.cn #智谱清言
+  - DOMAIN-SUFFIX,hunyuan.tencent.com #腾讯混元
+  - DOMAIN-SUFFIX,minimax.com #MiniMax
+  - DOMAIN-SUFFIX,hailuoai.com #海螺AI
+  - DOMAIN-SUFFIX,baichuan-ai.com #百川智能
+  - DOMAIN-SUFFIX,modelbest.cn #面壁智能
+  - DOMAIN-SUFFIX,01.ai #零一万物
+  - DOMAIN-SUFFIX,zhida.ai #知乎直答
+  - DOMAIN-SUFFIX,bigmodel.cn #智谱AI开放平台
+  - DOMAIN-SUFFIX,zhipuai.cn #智谱AI官网
+  - DOMAIN-SUFFIX,sensetime.com #商汤日日新
+  - DOMAIN-SUFFIX,sensecore.cn #商汤大模型平台
+  - DOMAIN-SUFFIX,cloudsway.com #云从科技
+  - DOMAIN-SUFFIX,chat.360.cn #360智脑
+  - DOMAIN-SUFFIX,siliconflow.cn #硅基流动
+  - DOMAIN-SUFFIX,dashscope.aliyun.com #阿里百炼API
+  - DOMAIN-SUFFIX,bailian.aliyun.com #阿里百炼平台
+  - DOMAIN-SUFFIX,bce.baidu.com #百度智能云
+  - DOMAIN-SUFFIX,minimaxi.com #MiniMax开发平台
+  - DOMAIN-SUFFIX,sensenova.cn #商汤SenseNova
+  - DOMAIN-SUFFIX,lingyiwanwu.com #零一万物平台
 # > 一些软件禁用
   - PROCESS-NAME,smartscreen.exe #Windows
   - PROCESS-NAME,Clash for Windows.exe #clash

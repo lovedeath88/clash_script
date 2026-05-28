@@ -35,9 +35,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Ai智能",
       "type": "select",
-      "include-all": true,
-      "filter": "(?i)^(?=.*(?:US|us|🇺🇸|America|美国))(?!.*(?:倍|流量|x)).*$",
-      "proxies": ["🇺🇸美国测速⚡", "关闭代理", "开启代理", "🇯🇵日本手动", "🇹🇼台湾手动"],
+      "proxies": ["🇺🇸美国测速⚡", "关闭代理", "开启代理", "🇺🇸美国手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇹🇼台湾测速⚡", "🇹🇼台湾手动", "🇸🇬新加坡测速⚡", "🇸🇬新加坡手动"],
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ai.png"
     },
     {
@@ -186,6 +184,14 @@ function main(config) {
       "hidden": false,
       "filter": "(?i)^(?=.*(?:TW|tw|🇹🇼|Taiwan|台湾))(?!.*(?:倍|流量|x)).*$"
     },
+    {
+      ...groupBaseOption,
+      "name": "🇸🇬新加坡手动",
+      "type": "select",
+      "include-all": true,
+      "hidden": false,
+      "filter": "(?i)^(?=.*(?:SG|sg|🇸🇬|singapore|新加坡))(?!.*(?:倍|流量|x)).*$"
+    },
   ];
 
   // 规则集通用配置（统一更新频率与格式）
@@ -314,13 +320,13 @@ function main(config) {
     "RULE-SET,Baa_System,DIRECT,no-resolve",
     "RULE-SET,reject,广告拦截",
     "RULE-SET,Privacy,隐私保护",
+    "RULE-SET,Baa_CN,关闭代理",
     "RULE-SET,Baa_USA,Ai智能",
     "RULE-SET,Baa_Agent,Ai智能",
     "RULE-SET,BilibiliHMT,番剧出差",
     "RULE-SET,SteamCN,国内_Game",
     "RULE-SET,Epic,国内_Game",
     "RULE-SET,Game,国外_Game",
-    "RULE-SET,Baa_CN,关闭代理",
     "RULE-SET,applications,关闭代理,no-resolve",
     "RULE-SET,GFW,开启代理",
     "RULE-SET,Proxy,开启代理",
