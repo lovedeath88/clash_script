@@ -7,46 +7,37 @@ payload:
   - DOMAIN-SUFFIX,share.dmhy.org #动漫花园
   - DOMAIN-SUFFIX,acg.rip #ACG动漫
   - DOMAIN-SUFFIX,girigirilove.com #giri番剧
-# > 国外付费图片网站
-  - DOMAIN-SUFFIX,flickr.com #Flickr
-  - DOMAIN-SUFFIX,123rf.com #123RF
-  - DOMAIN-SUFFIX,shutterstock.com #Shutterstock
-  - DOMAIN-SUFFIX,stock.adobe.com #Adobe stock
-  - DOMAIN-SUFFIX,depositphotos.com #Depositphotos
-  - DOMAIN-SUFFIX,dreamstime.com #Dreamstime
-  - DOMAIN-SUFFIX,istockphoto.com #Istockphoto
-  - DOMAIN-SUFFIX,vectorstock.com #Vectorstock
-# > 免办税图片
-  - DOMAIN-SUFFIX,pixabay.com
-  - DOMAIN-SUFFIX,picjumbo.com
-  - DOMAIN-SUFFIX,stocksnap.io
-  - DOMAIN-SUFFIX,pixelsquid.com
-# > 国外素材网站
-  - DOMAIN-SUFFIX,artstation.com #A站
-  - DOMAIN-SUFFIX,midjourney.com #AI
-  - DOMAIN-SUFFIX,dribbble.com #追波
-  - DOMAIN-SUFFIX,pinterest.com #国外花瓣
-  - DOMAIN-SUFFIX,pixiv.net #P站插画
-  - DOMAIN-SUFFIX,behance.net # B焊死
-# > 国外AI常用网站
-  - DOMAIN-SUFFIX,civitai.com #AI-C站，全球最大的模型平台
-  - DOMAIN-SUFFIX,huggingface.co #大模型下载
-  - DOMAIN-SUFFIX,comfy.icu #在线调用现有的平台工作流
-  - DOMAIN-SUFFIX,supagruen.github.io #艺术家风格网站-训练
-  - DOMAIN-SUFFIX,openart.ai #公开工作流
-  - DOMAIN-SUFFIX,openai.com #GPT-4
-  - DOMAIN-SUFFIX,flowith.io #香蕉第三方在线平台
-# > 国外设计论坛
-  - DOMAIN-SUFFIX,maxon.net #C4D官网
-  - DOMAIN-SUFFIX,sidefx.com #Houdini官网
-  - DOMAIN-SUFFIX,blender.org #Blender
-  - DOMAIN-SUFFIX,otoy.com #OC官网
-# > 国外不明网站
-  - DOMAIN-SUFFIX,imgix.com
-  - DOMAIN-SUFFIX,google-analytics.com
 # > 国外乱七八糟
   - DOMAIN-SUFFIX,klei.com #科雷游戏
   - DOMAIN-SUFFIX,jsdelivr.com #加速Github地址
   - DOMAIN-SUFFIX,anno1800.modhub.io #纪元1800
   - PROCESS-NAME,Anno1800.exe #纪元1800
+# > 编程相关
+  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
+  - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
+  - PROCESS-NAME,Qoder.exe #Qoder.exe
+  - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
+  - PROCESS-NAME,git-bash.exe #git-bash.exe
+  - PROCESS-NAME,git-cmd.exe #git-cmd.exe
+  - PROCESS-NAME,git-gui.exe #git-gui.exe
+  - PROCESS-NAME,Codex.exe #Codex.exe
+  - PROCESS-NAME,python.exe #python.exe
+  - PROCESS-NAME,node.exe #node.exe #node.exe
+  - PROCESS-NAME,Code.exe #Code.exe
+  - PROCESS-NAME,WorkBuddy.exe #WorkBuddy.exe
+  - PROCESS-NAME,Marvis.exe #Marvis.exe
+# > 品牌API平台
   - DOMAIN-SUFFIX,lovart.ai #lovart 
+  - DOMAIN-SUFFIX,flowith.io #flowith
+  - DOMAIN-SUFFIX,tapnow.ai #tapnow
+  - DOMAIN-SUFFIX,genspark.ai #genspark
+  - DOMAIN-SUFFIX,vectary.com #vectary画图
+# > 中转API平台
+  - DOMAIN-SUFFIX,loveapi.org #loveapi
+  - DOMAIN-SUFFIX,gemai.cc #哈基米
+  - DOMAIN-SUFFIX,blcay.ai #帕拉图
+  - DOMAIN-SUFFIX,t8star.org #贞贞
+  - DOMAIN-SUFFIX,comfly.org #comfly
+  - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
+  - DOMAIN-KEYWORD,sillydream #sillydream
+

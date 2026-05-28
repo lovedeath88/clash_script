@@ -1,9 +1,5 @@
 payload:
   - DOMAIN-SUFFIX,cn,DIRECT # 匹配所有 .cn 域名
-# > AI网站
-  - DOMAIN-SUFFIX,ai.comfly.chat #comfly
-  - DOMAIN-SUFFIX,ai.t8star.cn #贞贞ai
-  - DOMAIN-KEYWORD,sillydream #sillydream
 # > 影视音乐
   - DOMAIN-SUFFIX,yinfans.me #音丝范（电影下载）
   - DOMAIN-SUFFIX,eacg1.com #番剧
