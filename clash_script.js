@@ -321,7 +321,6 @@ function main(config) {
     "RULE-SET,Epic,国内_Game",
     "RULE-SET,Game,国外_Game",
     "RULE-SET,Baa_CN,关闭代理",
-    "RULE-SET,Baa_Agent,Ai智能",
     "RULE-SET,applications,关闭代理,no-resolve",
     "RULE-SET,GFW,开启代理",
     "RULE-SET,Proxy,开启代理",
