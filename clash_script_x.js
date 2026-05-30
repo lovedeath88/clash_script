@@ -331,6 +331,13 @@ function main(config) {
   const rules = [
     "DOMAIN-SUFFIX,raw.githubusercontent.com,开启代理",
     "RULE-SET,Baa_System,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,dns.google,开启代理",
+    "DOMAIN-SUFFIX,cloudflare-dns.com,开启代理",
+    "DOMAIN-SUFFIX,doh.dns.sb,开启代理",
+    "DOMAIN-SUFFIX,dns.quad9.net,开启代理",
+    "DOMAIN-SUFFIX,dns.nextdns.io,开启代理",
+    "DOMAIN-SUFFIX,stun.l.google.com,开启代理",
+    "DOMAIN-KEYWORD,stun,开启代理",
     "RULE-SET,reject,广告拦截",
     "RULE-SET,Privacy,隐私保护",
     "RULE-SET,Baa_CN,关闭代理",
