@@ -339,6 +339,7 @@ function main(config) {
     "GEOIP,LAN,关闭代理,no-resolve",
     "GEOSITE,CN,关闭代理,no-resolve",
     "GEOIP,CN,关闭代理",
+    "AND,((NETWORK,UDP),(DST-PORT,443)),REJECT",
     "MATCH,黑白名单"
   ];
 

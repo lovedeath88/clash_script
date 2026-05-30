@@ -1,18 +1,19 @@
 payload:
-# =============================================================================
-# AI 对话/助手
-# =============================================================================
-
-# > OpenAI
+# > AI 对话/助手 - OpenAI
   - DOMAIN-SUFFIX,chatgpt.com #ChatGPT
   - DOMAIN-SUFFIX,chat.openai.com #ChatGPT网页版
   - DOMAIN-SUFFIX,openai.com #OpenAI官网
   - DOMAIN-SUFFIX,platform.openai.com #OpenAI平台
   - DOMAIN,chat.openai.com.cdn.cloudflare.net #OpenAI CDN
+  - DOMAIN-KEYWORD,chat.openai.com.cdn.cloudflare.net #OpenAI CDN
   - DOMAIN,openai-api.arkoselabs.com #OpenAI安全验证
+  - DOMAIN-KEYWORD,openai-api.arkoselabs.com #OpenAI安全验证
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net #OpenAI Azure后端
+  - DOMAIN-KEYWORD,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net #OpenAI Azure后端
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net #OpenAI Azure存储
+  - DOMAIN-KEYWORD,openaicomproductionae4b.blob.core.windows.net #OpenAI Azure存储
   - DOMAIN,production-openaicom-storage.azureedge.net #OpenAI Azure CDN
+  - DOMAIN-KEYWORD,production-openaicom-storage.azureedge.net #OpenAI Azure CDN
   - DOMAIN-SUFFIX,auth0.openai.com #OpenAI Auth0认证
   - DOMAIN-SUFFIX,pay.openai.com #OpenAI支付
   - DOMAIN-SUFFIX,chat.com #Chat.com
@@ -28,29 +29,37 @@ payload:
   - DOMAIN-SUFFIX,dalle.com #OpenAI DALL·E
   - DOMAIN-SUFFIX,sora.com #OpenAI Sora视频
 
-# > Anthropic / Claude
-  - DOMAIN-SUFFIX,anthropic.com #Anthropic官网
-  - DOMAIN-SUFFIX,claude.com #Claude官网
+# > AI 对话/助手 - Anthropic / Claude
+  - DOMAIN-SUFFIX,anthropic.com #Anthropic
+  - DOMAIN-SUFFIX,claude.com #Anthropic Claude
   - DOMAIN-SUFFIX,claude.ai #Claude聊天
   - DOMAIN-SUFFIX,claudeusercontent.com #Claude用户内容
   - DOMAIN,cdn.usefathom.com #Claude分析服务
+  - DOMAIN-KEYWORD,cdn.usefathom.com #Fathom分析CDN
   - DOMAIN-KEYWORD,servd-anthropic-website.b-cdn.net #Anthropic网站CDN
   - DOMAIN-KEYWORD,anthropic #Anthropic
   - DOMAIN-KEYWORD,claude #Claude
 
-# > Google / Gemini
+# > AI 对话/助手 - Google / Gemini / DeepMind
   - DOMAIN-SUFFIX,gemini.google.com #Google Gemini
+  - DOMAIN-KEYWORD,gemini.google.com #Google Gemini
   - DOMAIN-SUFFIX,aistudio.google.com #Google AI Studio
   - DOMAIN-SUFFIX,labs.google.com #Google AI实验室
   - DOMAIN-SUFFIX,labs.google #Google Labs
   - DOMAIN-SUFFIX,stitch.withgoogle.com #Google Stitch
   - DOMAIN,ai.google.dev #Google AI开发者
+  - DOMAIN-KEYWORD,ai.google.dev #Google AI开发者
   - DOMAIN-KEYWORD,alkalicore-pa.clients6.google.com #Google核心后端
   - DOMAIN,alkalimakersuite-pa.clients6.google.com #Google MakerSuite
+  - DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com #Google MakerSuite后端
+  - DOMAIN-KEYWORD,makersuite.google.com #Google MakerSuite
   - DOMAIN-SUFFIX,makersuite.google.com #Google MakerSuite
   - DOMAIN-SUFFIX,apis.google.com #Google API
   - DOMAIN-SUFFIX,googleapis.com #Google API
   - DOMAIN-SUFFIX,bard.google.com #Google Bard
+  - DOMAIN-KEYWORD,bard.google.com #Google Bard
+  - DOMAIN-SUFFIX,deepmind.com #DeepMind
+  - DOMAIN-SUFFIX,deepmind.google #DeepMind Google
   - DOMAIN-SUFFIX,generativeai.google #Google Generative AI
   - DOMAIN-SUFFIX,generativelanguage.googleapis.com #Google Generative Language API
   - DOMAIN-KEYWORD,generativelanguage #Google Generative Language
@@ -63,61 +72,58 @@ payload:
   - DOMAIN-KEYWORD,colab #Google Colab
   - DOMAIN-KEYWORD,developerprofiles #Google开发者
   - DOMAIN-KEYWORD,aistudio #Google AI Studio
-
-# > Google DeepMind
-  - DOMAIN-SUFFIX,deepmind.com #DeepMind
-  - DOMAIN-SUFFIX,deepmind.google #DeepMind Google
-
-# > Google 基础设施
   - DOMAIN-SUFFIX,gstatic.com #Google静态资源
   - DOMAIN-SUFFIX,gvt1.com #Google Video Transcoding
   - DOMAIN-SUFFIX,gvt2.com #Google Video Transcoding
   - DOMAIN-SUFFIX,gvt3.com #Google Video Transcoding
   - DOMAIN-SUFFIX,google-analytics.com #Google分析
 
-# >> Microsoft 生态
-# > Microsoft Copilot
+# > AI 对话/助手 - Microsoft / Bing / GitHub Copilot
   - DOMAIN-SUFFIX,copilot.microsoft.com #Microsoft Copilot
-  - DOMAIN-KEYWORD,opilot.microsoft.com #Microsoft Copilot
-  - DOMAIN-KEYWORD,copilot #Copilot
-
-# > Bing 搜索
-  - DOMAIN,api.msn.com #MSN API
-  - DOMAIN,assets.msn.com #MSN资源
-  - DOMAIN,gateway.bingviz.microsoft.net #Bing可视化网关
-  - DOMAIN,gateway.bingviz.microsoftapp.net #Bing可视化App网关
-  - DOMAIN,location.microsoft.com #Microsoft位置服务
-  - DOMAIN,r.bing.com #Bing
-  - DOMAIN,services.bingapis.com #Bing API
-  - DOMAIN,sydney.bing.com #Bing Sydney
-  - DOMAIN,www.bing.com #Bing搜索
-  - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io #Bing购物
-  - DOMAIN-SUFFIX,edgeservices.bing.com #Bing边缘服务
-  - DOMAIN-SUFFIX,bing.com #Bing搜索
-
-# > GitHub Copilot
+  - DOMAIN-KEYWORD,copilot.microsoft.com #Microsoft Copilot
   - DOMAIN-KEYWORD,api.githubcopilot.com #GitHub Copilot API
   - DOMAIN-KEYWORD,api.individual.githubcopilot.com #GitHub Copilot个人API
   - DOMAIN-KEYWORD,copilot-proxy.githubusercontent.com #GitHub Copilot代理
+  - DOMAIN-KEYWORD,copilot #Copilot
   - DOMAIN-KEYWORD,api.github.com #GitHub API
   - DOMAIN-SUFFIX,github.dev #GitHub Codespaces
-
-# > MSN / Office / Azure
+  - DOMAIN,api.msn.com #MSN API
+  - DOMAIN-KEYWORD,api.msn.com #MSN API
+  - DOMAIN,assets.msn.com #MSN资源
+  - DOMAIN-KEYWORD,assets.msn.com #MSN资源
+  - DOMAIN,gateway.bingviz.microsoft.net #Bing可视化网关
+  - DOMAIN-KEYWORD,gateway.bingviz.microsoft.net #Bing可视化网关
+  - DOMAIN,gateway.bingviz.microsoftapp.net #Bing可视化App网关
+  - DOMAIN-KEYWORD,gateway.bingviz.microsoftapp.net #Bing可视化App网关
   - DOMAIN,in.appcenter.ms #App Center
+  - DOMAIN-KEYWORD,in.appcenter.ms #App Center
+  - DOMAIN,location.microsoft.com #Microsoft位置服务
+  - DOMAIN-KEYWORD,location.microsoft.com #Microsoft位置服务
   - DOMAIN,odc.officeapps.live.com #Office Online
+  - DOMAIN-KEYWORD,odc.officeapps.live.com #Office Online
+  - DOMAIN,r.bing.com #Bing
+  - DOMAIN-KEYWORD,r.bing.com #Bing
   - DOMAIN,self.events.data.microsoft.com #Microsoft遥测
+  - DOMAIN-KEYWORD,self.events.data.microsoft.com #Microsoft遥测
+  - DOMAIN,services.bingapis.com #Bing API
+  - DOMAIN-KEYWORD,services.bingapis.com #Bing API
+  - DOMAIN,sydney.bing.com #Bing Sydney
+  - DOMAIN-KEYWORD,sydney.bing.com #Bing Sydney
+  - DOMAIN,www.bing.com #Bing搜索
+  - DOMAIN-KEYWORD,www.bing.com #Bing搜索
   - DOMAIN-SUFFIX,api.microsoftapp.net #Microsoft App API
+  - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io #Bing购物
+  - DOMAIN-SUFFIX,edgeservices.bing.com #Bing边缘服务
+  - DOMAIN-KEYWORD,opilot.microsoft.com #Microsoft Copilot
+  - DOMAIN-SUFFIX,bing.com #Bing搜索
   - DOMAIN-SUFFIX,microsoft.com #微软
   - DOMAIN-SUFFIX,sfx.ms #微软SFX
   - DOMAIN-SUFFIX,msftconnecttest.com #微软连通性检测
   - DOMAIN-SUFFIX,live.com #微软Live
 
-# >> xAI / Twitter
-# > xAI
+# > AI 对话/助手 - xAI / X
   - DOMAIN-SUFFIX,grok.com #xAI Grok
   - DOMAIN-SUFFIX,x.ai #xAI官网
-
-# > Twitter / X
   - DOMAIN-SUFFIX,x.com #X平台
   - DOMAIN-SUFFIX,ads-twitter.com #Twitter广告
   - DOMAIN-SUFFIX,cms-twdigitalassets.com #Twitter数字资源CMS
@@ -151,23 +157,20 @@ payload:
   - IP-CIDR,209.237.192.0/19 #Twitter IP
   - IP-CIDR,69.195.160.0/19 #Twitter IP
 
-# > Apple Intelligence
+# > AI 对话/助手 - Apple Intelligence
   - DOMAIN,apple-relay.apple.com #Apple中继服务
   - DOMAIN-KEYWORD,apple-relay.apple.com #Apple中继
   - DOMAIN,apple-relay.cloudflare.com #Apple中继Cloudflare
   - DOMAIN-KEYWORD,apple-relay.cloudflare.com #Apple中继Cloudflare
 
-# >> AI 搜索引擎
+# > AI 对话/助手 - 其他模型与搜索品牌
   - DOMAIN-SUFFIX,perplexity.ai #AI搜索引擎
-  - DOMAIN-SUFFIX,you.com #You.com AI搜索
-
-# >> AI 聊天平台
-  - DOMAIN-SUFFIX,poe.com #AI多模型聊天聚合平台
+  - DOMAIN-SUFFIX,poe.com #Quora AI聊天平台
   - DOMAIN-SUFFIX,character.ai #AI角色扮演
+  - DOMAIN-SUFFIX,you.com #You.com AI搜索
+  - DOMAIN-SUFFIX,inflection.ai #Inflection AI
+  - DOMAIN-SUFFIX,pi.ai #Pi AI
   - DOMAIN-SUFFIX,meta.ai #Meta AI
-  - DOMAIN-SUFFIX,ciciai.com #Cici AI
-
-# >> 开源/平台模型
   - DOMAIN-SUFFIX,mistral.ai #Mistral AI（法国）
   - DOMAIN-SUFFIX,chat.mistral.ai #Mistral聊天
   - DOMAIN-SUFFIX,cohere.com #Cohere
@@ -176,19 +179,12 @@ payload:
   - DOMAIN-SUFFIX,chat.groq.com #Groq聊天
   - DOMAIN-SUFFIX,console.groq.com #Groq控制台
   - DOMAIN-KEYWORD,groq #Groq
-  - DOMAIN-SUFFIX,inflection.ai #Inflection AI
-  - DOMAIN-SUFFIX,pi.ai #Pi AI
   - DOMAIN-SUFFIX,hcompany.ai #H Company AI
   - DOMAIN-KEYWORD,hcompany #H Company
-
-# >> 通用域名
+  - DOMAIN-SUFFIX,ciciai.com #Cici AI
   - DOMAIN-SUFFIX,ai.com #AI.com
 
-# =============================================================================
-# AI 开发 - IDE 与代码助手
-# =============================================================================
-
-# >> AI IDE
+# > AI 开发 - IDE 与代码助手
   - DOMAIN-SUFFIX,cursor.com #Cursor AI IDE
   - DOMAIN-SUFFIX,cursor.sh #Cursor IDE
   - DOMAIN-SUFFIX,cursor-cdn.com #Cursor CDN
@@ -196,38 +192,26 @@ payload:
   - DOMAIN-SUFFIX,workos.com #Cursor认证(WorkOS)
   - DOMAIN-SUFFIX,windsurf.ai #AI IDE
   - DOMAIN-SUFFIX,windsurf.com #Windsurf IDE
-
-# >> AI 代码助手
   - DOMAIN-SUFFIX,augmentcode.com #AugmentCode AI编程
   - DOMAIN-SUFFIX,codeium.com #Codeium AI编程
   - DOMAIN-SUFFIX,codeiumdata.com #Codeium数据
   - DOMAIN-SUFFIX,grazie.ai #JetBrains Grazie AI
   - DOMAIN-SUFFIX,grazie.aws.intellij.net #JetBrains Grazie AWS
-  - DOMAIN-SUFFIX,sider.ai #Sider AI助手
-
-# >> AI 应用生成
   - DOMAIN-SUFFIX,v0.dev #Vercel AI代码生成
   - DOMAIN-SUFFIX,bolt.new #AI全栈生成
   - DOMAIN-SUFFIX,lovable.dev #AI应用构建
-
-# >> 在线开发平台
   - DOMAIN-SUFFIX,phind.com #AI编程搜索
   - DOMAIN-SUFFIX,replit.com #在线IDE
   - DOMAIN-SUFFIX,gitpod.io #Gitpod在线IDE
   - DOMAIN-SUFFIX,codesandbox.io #CodeSandbox
+  - DOMAIN-SUFFIX,sider.ai #Sider AI助手
 
-# =============================================================================
-# AI 开发 - 模型托管与应用平台
-# =============================================================================
-
-# >> 模型/数据集托管
+# > AI 开发 - 模型托管与应用平台
   - DOMAIN-SUFFIX,huggingface.co #HuggingFace模型库
   - DOMAIN-SUFFIX,replicate.com #Replicate模型托管
   - DOMAIN-SUFFIX,civitai.com #Civitai模型社区
   - DOMAIN-SUFFIX,kaggle.com #Kaggle数据竞赛
   - DOMAIN-SUFFIX,gradio.app #Gradio ML演示
-
-# >> AI 应用平台
   - DOMAIN-SUFFIX,modal.com #AI云平台
   - DOMAIN-SUFFIX,banana.dev #AI推理平台
   - DOMAIN-SUFFIX,coze.com #Coze AI平台
@@ -235,18 +219,14 @@ payload:
   - DOMAIN-SUFFIX,lmsys.org #LMSys AI评测
   - DOMAIN-SUFFIX,opera-api.com #Opera浏览器API
 
-# =============================================================================
-# AI 创作 - 图像生成
-# =============================================================================
-
-# >> 文生图
+# > AI 创作 - 图像生成
   - DOMAIN-SUFFIX,midjourney.com #Midjourney
   - DOMAIN-SUFFIX,ideogram.ai #Ideogram文生图
   - DOMAIN-SUFFIX,leonardo.ai #Leonardo AI画图
   - DOMAIN-SUFFIX,stability.ai #Stable Diffusion
   - DOMAIN-SUFFIX,firefly.adobe.com #Adobe Firefly
   - DOMAIN-SUFFIX,openclaw.ai #OpenClaw
-  - DOMAIN-SUFFIX,krea.ai #AI图像生成
+  - DOMAIN-SUFFIX,krea.ai #画画用的
   - DOMAIN-SUFFIX,getimg.ai #AI图像生成
   - DOMAIN-SUFFIX,playgroundai.com #Playground AI
   - DOMAIN-SUFFIX,tensor.art #Tensor Art模型
@@ -254,58 +234,42 @@ payload:
   - DOMAIN-SUFFIX,recraft.ai #AI设计工具
   - DOMAIN-SUFFIX,openart.ai #AI艺术
 
-# >> 图像编辑/增强
+# > AI 创作 - 图像编辑
   - DOMAIN-SUFFIX,clipdrop.co #Clipdrop AI编辑
   - DOMAIN-SUFFIX,photoroom.com #AI抠图/编辑
   - DOMAIN-SUFFIX,magnific.ai #AI图像增强
 
-# >> ComfyUI 工作流
+# > AI 创作 - ComfyUI
   - DOMAIN-SUFFIX,comfy.icu #ComfyUI云端
   - DOMAIN-SUFFIX,cloud.comfy.org #ComfyUI云平台
   - DOMAIN-SUFFIX,supagruen.github.io #艺术家风格训练
 
-# =============================================================================
-# AI 创作 - 视频生成
-# =============================================================================
-
-# >> 文生视频/编辑
+# > AI 创作 - 视频生成
   - DOMAIN-SUFFIX,runwayml.com #Runway AI视频
   - DOMAIN-SUFFIX,pika.art #Pika AI视频
   - DOMAIN-SUFFIX,genspark.ai #GenSpark
-  - DOMAIN-SUFFIX,lumalabs.ai #Luma Dream Machine
-  - DOMAIN-SUFFIX,haiper.ai #AI视频生成
-  - DOMAIN-SUFFIX,klingai.com #Kling AI视频
+  - DOMAIN-SUFFIX,synthesia.io #Synthesia数字人
+  - DOMAIN-SUFFIX,heygen.com #HeyGen数字人
   - DOMAIN-SUFFIX,veed.io #Veed在线视频编辑
   - DOMAIN-SUFFIX,vidnoz.com #Vidnoz AI视频
   - DOMAIN-SUFFIX,invideo.io #AI视频生成
   - DOMAIN-SUFFIX,descript.com #AI视频/音频编辑
+  - DOMAIN-SUFFIX,lumalabs.ai #Luma Dream Machine
+  - DOMAIN-SUFFIX,haiper.ai #AI视频生成
+  - DOMAIN-SUFFIX,klingai.com #Kling AI视频
 
-# >> 数字人/虚拟主播
-  - DOMAIN-SUFFIX,synthesia.io #Synthesia数字人
-  - DOMAIN-SUFFIX,heygen.com #HeyGen数字人
-
-# =============================================================================
-# AI 创作 - 音乐/音频
-# =============================================================================
-
-# >> AI 音乐生成
+# > AI 创作 - 音乐/音频
   - DOMAIN-SUFFIX,suno.ai #Suno AI音乐
+  - DOMAIN-SUFFIX,elevenlabs.io #ElevenLabs语音克隆
   - DOMAIN-SUFFIX,udio.com #Udio AI音乐
   - DOMAIN-SUFFIX,musicfy.live #Musicfy AI音乐
   - DOMAIN-SUFFIX,mubert.com #Mubert AI音乐
+  - DOMAIN-SUFFIX,voicemod.net #Voicemod变声器
   - DOMAIN-SUFFIX,soundraw.io #AI音乐生成
   - DOMAIN-SUFFIX,boomy.com #AI音乐制作
   - DOMAIN-SUFFIX,riffusion.com #AI音乐生成
 
-# >> 语音/音频工具
-  - DOMAIN-SUFFIX,elevenlabs.io #ElevenLabs语音克隆
-  - DOMAIN-SUFFIX,voicemod.net #Voicemod变声器
-
-# =============================================================================
-# AI 效率 - 写作/翻译
-# =============================================================================
-
-# >> AI 写作
+# > AI 效率 - 写作/翻译
   - DOMAIN-SUFFIX,grammarly.com #Grammarly写作助手
   - DOMAIN-SUFFIX,jasper.ai #Jasper AI写作
   - DOMAIN-SUFFIX,rytr.me #Rytr AI写作
@@ -313,15 +277,9 @@ payload:
   - DOMAIN-SUFFIX,copy.ai #Copy AI营销文案
   - DOMAIN-SUFFIX,quillbot.com #QuillBot改写润色
   - DOMAIN-SUFFIX,flowith.io #AI写作
-
-# >> 翻译
   - DOMAIN-SUFFIX,deepl.com #DeepL翻译
 
-# =============================================================================
-# AI 效率 - 笔记/会议/演示
-# =============================================================================
-
-# >> 笔记/会议
+# > AI 效率 - 笔记/会议
   - DOMAIN-SUFFIX,notion.site #Notion笔记
   - DOMAIN-SUFFIX,notion.ai #Notion AI
   - DOMAIN-SUFFIX,fireflies.ai #AI会议笔记
@@ -329,89 +287,61 @@ payload:
   - DOMAIN-SUFFIX,mem.ai #AI笔记
   - DOMAIN-SUFFIX,taskade.com #AI协作
 
-# >> AI 演示
+# > AI 效率 - 演示
   - DOMAIN-SUFFIX,gamma.app #Gamma AI演示
   - DOMAIN-SUFFIX,tome.app #Tome AI演示
   - DOMAIN-SUFFIX,beautiful.ai #Beautiful.ai演示
 
-# =============================================================================
-# AI 搜索 - 学术/研究
-# =============================================================================
-
-# >> 学术搜索引擎
+# > AI 搜索 - 学术/研究
   - DOMAIN-SUFFIX,consensus.app #Consensus学术搜索
   - DOMAIN-SUFFIX,scispace.com #SciSpace学术搜索
   - DOMAIN-SUFFIX,elicit.com #Elicit学术搜索
   - DOMAIN-SUFFIX,semanticscholar.org #Semantic Scholar
   - DOMAIN-SUFFIX,searchgate.net #SearchGate学术
 
-# =============================================================================
-# 设计资源
-# =============================================================================
+# > 设计资源 - 创意社区
+  - DOMAIN-SUFFIX,artstation.com #A站
+  - DOMAIN-SUFFIX,dribbble.com #追波
+  - DOMAIN-SUFFIX,pinterest.com #国外花瓣
+  - DOMAIN-SUFFIX,pixiv.net #P站插画
+  - DOMAIN-SUFFIX,behance.net #Behance设计社区
 
-# >> 设计社区/作品集
-  - DOMAIN-SUFFIX,artstation.com #CG/概念艺术作品集平台
-  - DOMAIN-SUFFIX,behance.net #Adobe创意作品集社区
-  - DOMAIN-SUFFIX,dribbble.com #UI/UX设计师作品集社区
-  - DOMAIN-SUFFIX,flickr.com #摄影作品分享社区
-  - DOMAIN-SUFFIX,pinterest.com #视觉灵感/图库收藏平台
-  - DOMAIN-SUFFIX,pixiv.net #ACG插画/二次元作品社区
+# > 设计资源 - 3D/CG 软件
+  - DOMAIN-SUFFIX,maxon.net #C4D官网
+  - DOMAIN-SUFFIX,sidefx.com #Houdini官网
+  - DOMAIN-SUFFIX,blender.org #Blender
+  - DOMAIN-SUFFIX,otoy.com #Octane Render
 
-# >> 3D/CG 软件工具
-  - DOMAIN-SUFFIX,maxon.net #Cinema 4D(C4D)开发公司
-  - DOMAIN-SUFFIX,sidefx.com #Houdini 3D特效软件
-  - DOMAIN-SUFFIX,blender.org #Blender开源3D创作套件
-  - DOMAIN-SUFFIX,otoy.com #Octane Render渲染引擎
+# > 设计资源 - 图片/素材库
+  - DOMAIN-SUFFIX,flickr.com #Flickr
+  - DOMAIN-SUFFIX,123rf.com #123RF
+  - DOMAIN-SUFFIX,shutterstock.com #Shutterstock
+  - DOMAIN-SUFFIX,stock.adobe.com #Adobe stock
+  - DOMAIN-SUFFIX,depositphotos.com #Depositphotos
+  - DOMAIN-SUFFIX,dreamstime.com #Dreamstime
+  - DOMAIN-SUFFIX,istockphoto.com #Istockphoto
+  - DOMAIN-SUFFIX,vectorstock.com #Vectorstock
+  - DOMAIN-SUFFIX,pixabay.com #免版税图片
+  - DOMAIN-SUFFIX,picjumbo.com #免版税图片
+  - DOMAIN-SUFFIX,stocksnap.io #免版税图片
+  - DOMAIN-SUFFIX,pixelsquid.com #免版税3D素材
 
-# >> 付费素材库
-  - DOMAIN-SUFFIX,shutterstock.com #综合付费图库/视频/音乐/矢量
-  - DOMAIN-SUFFIX,stock.adobe.com #Adobe旗下付费素材库
-  - DOMAIN-SUFFIX,istockphoto.com #Getty Images旗下中高端付费图库
-  - DOMAIN-SUFFIX,depositphotos.com #付费图库/矢量/视频素材
-  - DOMAIN-SUFFIX,123rf.com #付费图库/音效/视频素材
-  - DOMAIN-SUFFIX,dreamstime.com #付费图库/投稿人社区
-  - DOMAIN-SUFFIX,vectorstock.com #矢量图素材库
-
-# >> 免版税素材库
-  - DOMAIN-SUFFIX,pixabay.com #免版税图片/视频/矢量/音效
-  - DOMAIN-SUFFIX,picjumbo.com #免版税图片素材
-  - DOMAIN-SUFFIX,stocksnap.io #免版税高分辨率图库
-  - DOMAIN-SUFFIX,pixelsquid.com #免版税3D模型旋转素材
-
-# =============================================================================
-# AI 基础设施
-# =============================================================================
-
-# >> 监控/分析
+# > AI 基础设施 - 安全/认证/CDN/监控
   - DOMAIN,browser-intake-datadoghq.com #Datadog监控
   - DOMAIN-KEYWORD,browser-intake-datadoghq.com #Datadog监控
-  - DOMAIN-SUFFIX,api.statsig.com #Statsig实验平台
-  - DOMAIN-KEYWORD,api.statsig.com #Statsig实验API
-  - DOMAIN-SUFFIX,events.statsigapi.net #Statsig事件
-  - DOMAIN-SUFFIX,statsigapi.net #Statsig实验API
-  - DOMAIN-SUFFIX,sentry.io #Sentry错误监控
-  - DOMAIN-KEYWORD,o33249.ingest.sentry.io #Sentry错误采集
-  - DOMAIN-SUFFIX,segment.io #Segment数据分析
-  - DOMAIN-SUFFIX,observeit.net #ObserveIt监控
-
-# >> CDN/安全/验证
   - DOMAIN,static.cloudflareinsights.com #Cloudflare Insights
   - DOMAIN-KEYWORD,static.cloudflareinsights.com #Cloudflare Insights
   - DOMAIN-KEYWORD,gateway.ai.cloudflare.com #Cloudflare AI网关
   - DOMAIN-SUFFIX,challenges.cloudflare.com #Cloudflare验证
   - DOMAIN-SUFFIX,client-api.arkoselabs.com #Arkose安全验证
-  - DOMAIN-SUFFIX,hcaptcha.com #hCaptcha验证
-  - DOMAIN-SUFFIX,recaptcha.net #reCAPTCHA验证
-
-# >> 认证/支付
+  - DOMAIN-SUFFIX,algolia.net #Algolia搜索
+  - DOMAIN-SUFFIX,api.statsig.com #Statsig实验平台
+  - DOMAIN-KEYWORD,api.statsig.com #Statsig实验API
+  - DOMAIN-SUFFIX,events.statsigapi.net #Statsig事件
+  - DOMAIN-SUFFIX,statsigapi.net #Statsig实验API
+  - DOMAIN-SUFFIX,featuregates.org #Feature Gates
   - DOMAIN-SUFFIX,auth0.com #Auth0身份认证
   - DOMAIN-SUFFIX,cdn.auth0.com #Auth0 CDN
-  - DOMAIN-SUFFIX,stripe.com #Stripe支付
-  - DOMAIN-SUFFIX,invoice.stripe.com #Stripe发票
-
-# >> 基础设施服务
-  - DOMAIN-SUFFIX,algolia.net #Algolia搜索
-  - DOMAIN-SUFFIX,featuregates.org #Feature Gates
   - DOMAIN-SUFFIX,host.livekit.cloud #LiveKit实时通信
   - DOMAIN-SUFFIX,turn.livekit.cloud #LiveKit TURN
   - DOMAIN-SUFFIX,identrust.com #IdentTrust证书
@@ -419,15 +349,20 @@ payload:
   - DOMAIN-SUFFIX,intercomcdn.com #Intercom CDN
   - DOMAIN-SUFFIX,intercom.cdn.com #Intercom客服CDN
   - DOMAIN-SUFFIX,launchdarkly.com #LaunchDarkly特性开关
+  - DOMAIN-SUFFIX,observeit.net #ObserveIt监控
+  - DOMAIN-SUFFIX,segment.io #Segment数据分析
+  - DOMAIN-SUFFIX,sentry.io #Sentry错误监控
+  - DOMAIN-KEYWORD,o33249.ingest.sentry.io #Sentry错误采集
+  - DOMAIN-SUFFIX,stripe.com #Stripe支付
+  - DOMAIN-SUFFIX,invoice.stripe.com #Stripe发票
   - DOMAIN-SUFFIX,azureedge.net #Azure Edge CDN
   - DOMAIN-SUFFIX,azurefd.net #Azure Front Door
+  - DOMAIN-SUFFIX,hcaptcha.com #hCaptcha验证
+  - DOMAIN-SUFFIX,recaptcha.net #reCAPTCHA验证
   - DOMAIN-SUFFIX,opendns.com #OpenDNS
   - DOMAIN-SUFFIX,imgix.com #图片处理/CDN
 
-# =============================================================================
-# AI 服务 - IP 地址
-# =============================================================================
-
+# > AI 服务 - IP 地址
   - IP-CIDR,24.199.123.28/32,no-resolve #AI服务IP
   - IP-CIDR,64.23.132.171/32,no-resolve #AI服务IP
   - IP-ASN,14061,no-resolve #AI服务IP(DigitalOcean)

@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "check:encoding": "node ./scripts/check-encoding.mjs"
+  },
   "dependencies": {
     "global-agent": "^4.1.3",
     "js-yaml": "^4.1.1"
