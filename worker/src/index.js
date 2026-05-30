@@ -42,7 +42,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "开启代理",
       "type": "select",
-      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇯🇵日本测速⚡", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇭🇰香港手动", "🇺🇸美国手动", "🇯🇵日本手动", "🇹🇼台湾手动"],
+      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
       "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Airport.png"
     },
     {
@@ -268,13 +268,15 @@ function main(config) {
     "BilibiliHMT": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://fastly.jsdelivr.net/gh/Aworld00/ACL4SSR@master/Clash/Providers/Ruleset/BilibiliHMT.yaml",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
       "path": "./ruleset/ACL4SSR/BilibiliHMT.yaml"
     },
     "LAN": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Aworld00/ACL4SSR@refs/heads/master/Clash/Providers/LocalAreaNetwork.yaml",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
       "path": "./ruleset/ACL4SSR/LAN.yaml"
     },
     "Baa_CN": {

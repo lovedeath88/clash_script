@@ -35,57 +35,57 @@ function main(config) {
       ...groupBaseOption,
       "name": "Ai智能",
       "type": "select",
-      "proxies": ["🇺🇸美国测速⚡", "关闭代理", "开启代理", "🇺🇸美国手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇹🇼台湾测速⚡", "🇹🇼台湾手动", "🇸🇬新加坡测速⚡", "🇸🇬新加坡手动"],
+      "proxies": ["🇺🇸美国测速⚡", "🇺🇸美国手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇹🇼台湾测速⚡", "🇹🇼台湾手动", "🇸🇬新加坡测速⚡", "🇸🇬新加坡手动", "关闭代理", "开启代理"],
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ai.png"
     },
     {
       ...groupBaseOption,
       "name": "开启代理",
       "type": "select",
-      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇯🇵日本测速⚡", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇭🇰香港手动", "🇺🇸美国手动", "🇯🇵日本手动", "🇹🇼台湾手动"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Airport.png"
+      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Airport.png"
     },
     {
       ...groupBaseOption,
       "name": "广告拦截",
       "type": "select",
       "proxies": ["REJECT", "关闭代理"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/adguard.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/adguard.png"
     },
     {
       ...groupBaseOption,
       "name": "隐私保护",
       "type": "select",
       "proxies": ["REJECT", "关闭代理"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Ip.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Ip.png"
     },
     {
       ...groupBaseOption,
       "name": "关闭代理",
       "type": "select",
       "proxies": ["DIRECT", "开启代理"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/China.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/China.png"
     },
     {
       ...groupBaseOption,
       "name": "番剧出差",
       "type": "select",
       "proxies": ["关闭代理", "🇭🇰香港测速⚡"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/bilibili.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/bilibili.png"
     },
     {
       ...groupBaseOption,
       "name": "国内_Game",
       "type": "select",
       "proxies": ["关闭代理", "开启代理"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Game.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Game.png"
     },
     {
       ...groupBaseOption,
       "name": "国外_Game",
       "type": "select",
       "proxies": ["关闭代理", "开启代理", "🇭🇰香港测速⚡", "🇸🇬新加坡测速⚡"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Steam.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Steam.png"
     },
     {
       ...groupBaseOption,
@@ -94,14 +94,14 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)^(?!.*(?:HK|hk|🇭🇰|hongkong|港|JP|jp|🇯🇵|Japan|日本|KR|kr|🇰🇷|korea|韩国|TW|tw|🇹🇼|Taiwan|台湾|US|us|🇺🇸|America|美国|SG|sg|🇸🇬|singapore|新加坡|🏷|t\\.me)).*",
       "proxies": ["开启代理", "关闭代理"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/GitHub.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/GitHub.png"
     },
     {
       ...groupBaseOption,
       "name": "黑白名单",
       "type": "select",
       "proxies": ["开启代理", "关闭代理", "🇭🇰香港测速⚡"],
-      "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Select.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Select.png"
     },
     // 自动选择代理组（隐藏，仅用于分流）
     {
@@ -279,13 +279,15 @@ function main(config) {
     "BilibiliHMT": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://fastly.jsdelivr.net/gh/Aworld00/ACL4SSR@master/Clash/Providers/Ruleset/BilibiliHMT.yaml",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
       "path": "./ruleset/ACL4SSR/BilibiliHMT.yaml"
     },
     "LAN": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Aworld00/ACL4SSR@refs/heads/master/Clash/Providers/LocalAreaNetwork.yaml",
+      "format": "text",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
       "path": "./ruleset/ACL4SSR/LAN.yaml"
     },
     "Baa_CN": {
