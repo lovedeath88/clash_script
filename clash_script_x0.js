@@ -9,7 +9,7 @@ function main(config) {
   if (!config["tun"]) config["tun"] = {};
   config["tun"]["enable"] = true;
   config["tun"]["stack"] = "mixed";
-  config["tun"]["dns-hijack"] = ["any:53"];
+  config["tun"]["dns-hijack"] = ["any:53","any:5353"];
   config["tun"]["strict-route"] = true;
   config["tun"]["auto-route"] = true;
   config["tun"]["auto-detect-interface"] = true;
@@ -17,16 +17,17 @@ function main(config) {
   // 防泄漏配置 + 满血 DNS
   if (!config["dns"]) config["dns"] = {};
   config["dns"]["enable"] = true;
-  config["dns"]["listen"] = "0.0.0.0:53";
+  config["dns"]["listen"] = "127.0.0.1:53";
   config["dns"]["ipv6"] = false;
   config["dns"]["enhanced-mode"] = "fake-ip";
   config["dns"]["fake-ip-range"] = "198.18.0.1/16";
   config["dns"]["fake-ip-filter-mode"] = "blacklist";
-  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","*.microsoft.com","*.windows.com","*.xboxlive.com","dns.msftncsi.com","www.gstatic.com","*.nvidia.com","*.steamcontent.com","*.steamcommunity.com","*.steampowered.com","*.steamstatic.com"];
+  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","*.microsoft.com","*.windows.com","*.xboxlive.com","dns.msftncsi.com","www.gstatic.com","*.nvidia.com","*.steamcontent.com","*.steamcommunity.com","*.steampowered.com","*.steamstatic.com","*.qq.com","*.wechat.com","*.weixin.com","*.baidu.com","*.taobao.com","*.tmall.com","*.jd.com","*.alipay.com","*.163.com","*.126.com","*.aliyun.com","*.tencent.com","*.dingtalk.com"];
   config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114","119.29.29.29"];
   config["dns"]["nameserver"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://doh.360.cn/dns-query"];
-  config["dns"]["fallback"] = ["https://dns.alidns.com/dns-query","https://doh.pub/dns-query","https://dns.cloudflare.com/dns-query"];
+  config["dns"]["fallback"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://dns.cloudflare.com/dns-query"];
   config["dns"]["fallback-filter"] = {"geoip": true,"geoip-code": "CN","gcid": ["www.baidu.com","www.qq.com"]};
+  config["dns"]["routing"] = true;
 
   if (!config["rules"]) config["rules"] = [];
 
