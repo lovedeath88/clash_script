@@ -1,33 +1,36 @@
 function main(config) {
 
-  // ====================== 基础配置（零爆红·防封） ======================
+  // ====================== 基础配置 ======================
   config["ipv6"] = false;
   config["global-client-fingerprint"] = "chrome";
   config["geodata-mode"] = true;
 
-  // TUN模式（必须开启）
-  if (!config["tun"]) config["tun"] = {};
-  config["tun"]["enable"] = true;
-  config["tun"]["stack"] = "mixed";
-  config["tun"]["dns-hijack"] = ["any:53","any:5353"];
-  config["tun"]["strict-route"] = true;
-  config["tun"]["auto-route"] = true;
-  config["tun"]["auto-detect-interface"] = true;
-
-  // 防泄漏配置 + 满血 DNS
+  // ====================== 防泄漏配置 + 满血 DNS ======================
   if (!config["dns"]) config["dns"] = {};
   config["dns"]["enable"] = true;
-  config["dns"]["listen"] = "127.0.0.1:53";
+  config["dns"]["listen"] = "0.0.0.0:1053";
   config["dns"]["ipv6"] = false;
   config["dns"]["enhanced-mode"] = "fake-ip";
   config["dns"]["fake-ip-range"] = "198.18.0.1/16";
   config["dns"]["fake-ip-filter-mode"] = "blacklist";
-  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","*.microsoft.com","*.windows.com","*.xboxlive.com","dns.msftncsi.com","www.gstatic.com","*.nvidia.com","*.steamcontent.com","*.steamcommunity.com","*.steampowered.com","*.steamstatic.com","*.qq.com","*.wechat.com","*.weixin.com","*.baidu.com","*.taobao.com","*.tmall.com","*.jd.com","*.alipay.com","*.163.com","*.126.com","*.aliyun.com","*.tencent.com","*.dingtalk.com"];
-  config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114","119.29.29.29"];
-  config["dns"]["nameserver"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://doh.360.cn/dns-query"];
-  config["dns"]["fallback"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://dns.cloudflare.com/dns-query"];
-  config["dns"]["fallback-filter"] = {"geoip": true,"geoip-code": "CN","gcid": ["www.baidu.com","www.qq.com"]};
-  config["dns"]["routing"] = true;
+  config["dns"]["fake-ip-filter"] = [
+    "stun.*.*","stun.l.google.com","+.lan","+.local",
+    "*.microsoft.com","*.windows.com","*.xboxlive.com",
+    "dns.msftncsi.com","www.gstatic.com","*.nvidia.com",
+    "*.steamcontent.com","*.steamcommunity.com",
+    "*.steampowered.com","*.steamstatic.com",
+    "+.msftconnecttest.com","+.msftncsi.com",
+    "localhost.ptlogin2.qq.com","localhost.sec.qq.com",
+    "+.in-addr.arpa","+.ip6.arpa",
+    "time.*.com","time.*.gov","pool.ntp.org",
+    "localhost.work.weixin.qq.com"
+  ];
+  config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114"]; // 初始引导DNS（纯IP）
+  config["dns"]["nameserver"] = ["https://1.1.1.1/dns-query","https://8.8.4.4/dns-query","https://208.67.222.222/dns-query"]; // 默认DNS（国际，通过代理查询）
+  config["dns"]["proxy-server-nameserver"] = ["https://223.5.5.5/dns-query","https://doh.pub/dns-query"]; // 代理域名解析DNS（国内DoH）
+  config["dns"]["direct-nameserver"] = ["https://223.5.5.5/dns-query","https://doh.pub/dns-query"]; // 直连流量DNS（国内DoH）
+  config["dns"]["nameserver-policy"] = {"geosite:private,cn":["https://223.5.5.5/dns-query","https://doh.pub/dns-query"]}; // 国内域名策略
+  config["dns"]["respect-rules"] = true; // DNS遵循规则分流
 
   if (!config["rules"]) config["rules"] = [];
 
