@@ -10,7 +10,7 @@ function main(config) {
   config["tun"]["enable"] = true;
   config["tun"]["stack"] = "mixed";
   config["tun"]["dns-hijack"] = ["any:53"];
-  config["tun"]["strict-route"] = false;
+  config["tun"]["strict-route"] = true;
   config["tun"]["auto-route"] = true;
   config["tun"]["auto-detect-interface"] = true;
 
@@ -22,10 +22,10 @@ function main(config) {
   config["dns"]["enhanced-mode"] = "fake-ip";
   config["dns"]["fake-ip-range"] = "198.18.0.1/16";
   config["dns"]["fake-ip-filter-mode"] = "blacklist";
-  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","+.*"];
-  config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114","1.1.1.1"];
-  config["dns"]["nameserver"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://doh.dns.sb/dns-query"];
-  config["dns"]["fallback"] = ["https://doh.dns.sb/dns-query","https://dns.cloudflare.com/dns-query","https://dns.twnic.tw/dns-query"];
+  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","*.microsoft.com","*.windows.com","*.xboxlive.com","dns.msftncsi.com","www.gstatic.com","*.nvidia.com","*.steamcontent.com","*.steamcommunity.com","*.steampowered.com","*.steamstatic.com"];
+  config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114","119.29.29.29"];
+  config["dns"]["nameserver"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://doh.360.cn/dns-query"];
+  config["dns"]["fallback"] = ["https://dns.alidns.com/dns-query","https://doh.pub/dns-query","https://dns.cloudflare.com/dns-query"];
   config["dns"]["fallback-filter"] = {"geoip": true,"geoip-code": "CN","gcid": ["www.baidu.com","www.qq.com"]};
 
   if (!config["rules"]) config["rules"] = [];
