@@ -4,15 +4,41 @@ payload:
   - DOMAIN-SUFFIX,chat.openai.com #ChatGPT网页版
   - DOMAIN-SUFFIX,openai.com #OpenAI官网
   - DOMAIN-SUFFIX,platform.openai.com #OpenAI平台
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net #OpenAI CDN
+  - DOMAIN,openai-api.arkoselabs.com #OpenAI安全验证
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net #OpenAI Azure后端
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net #OpenAI Azure存储
+  - DOMAIN,production-openaicom-storage.azureedge.net #OpenAI Azure CDN
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud #ChatGPT语音通话
+  - DOMAIN-SUFFIX,oaistatic.com #OpenAI静态资源
+  - DOMAIN-SUFFIX,oaiusercontent.com #OpenAI用户内容
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net #OpenAI API Azure CDN
+  - DOMAIN-KEYWORD,openai #OpenAI关键词
+  - DOMAIN-KEYWORD,openaicom-api #OpenAI API关键词
   - DOMAIN-SUFFIX,perplexity.ai #AI搜索引擎
   - DOMAIN-SUFFIX,poe.com #Quora AI聊天平台
   - DOMAIN-SUFFIX,character.ai #AI角色扮演
   - DOMAIN-SUFFIX,claude.com #Anthropic Claude
   - DOMAIN-SUFFIX,claude.ai #Claude聊天
+  - DOMAIN-SUFFIX,anthropic.com #Anthropic
+  - DOMAIN,cdn.usefathom.com #Claude分析服务
   - DOMAIN-SUFFIX,gemini.google.com #Google Gemini
   - DOMAIN-SUFFIX,aistudio.google.com #Google AI Studio
   - DOMAIN-SUFFIX,labs.google.com #Google AI实验室
   - DOMAIN-SUFFIX,stitch.withgoogle.com #Google Stitch
+  - DOMAIN,ai.google.dev #Google AI开发者
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com #Google MakerSuite
+  - DOMAIN,generativelanguage.googleapis.com #Google Generative Language API
+  - DOMAIN,makersuite.google.com #Google MakerSuite
+  - DOMAIN-SUFFIX,apis.google.com #Google API
+  - DOMAIN-SUFFIX,bard.google.com #Google Bard
+  - DOMAIN-SUFFIX,deepmind.com #DeepMind
+  - DOMAIN-SUFFIX,deepmind.google #DeepMind Google
+  - DOMAIN-SUFFIX,generativeai.google #Google Generative AI
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com #Google主动后端
+  - DOMAIN-KEYWORD,colab #Google Colab
+  - DOMAIN-KEYWORD,developerprofiles #Google开发者
+  - DOMAIN-KEYWORD,generativelanguage #Google Generative Language
   - DOMAIN-SUFFIX,copilot.microsoft.com #Microsoft Copilot
   - DOMAIN-SUFFIX,grok.com #xAI Grok
   - DOMAIN-SUFFIX,x.ai #xAI官网
@@ -20,6 +46,22 @@ payload:
   - DOMAIN-SUFFIX,inflection.ai #Inflection AI
   - DOMAIN-SUFFIX,pi.ai #Pi AI
   - DOMAIN-SUFFIX,meta.ai #Meta AI
+# > AI 基础设施 - Microsoft / Copilot
+  - DOMAIN,api.msn.com #MSN API
+  - DOMAIN,assets.msn.com #MSN资源
+  - DOMAIN,gateway.bingviz.microsoft.net #Bing可视化网关
+  - DOMAIN,gateway.bingviz.microsoftapp.net #Bing可视化App网关
+  - DOMAIN,in.appcenter.ms #App Center
+  - DOMAIN,location.microsoft.com #Microsoft位置服务
+  - DOMAIN,odc.officeapps.live.com #Office Online
+  - DOMAIN,r.bing.com #Bing
+  - DOMAIN,self.events.data.microsoft.com #Microsoft遥测
+  - DOMAIN,services.bingapis.com #Bing API
+  - DOMAIN,sydney.bing.com #Bing Sydney
+  - DOMAIN,www.bing.com #Bing搜索
+  - DOMAIN-SUFFIX,api.microsoftapp.net #Microsoft App API
+  - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io #Bing购物
+  - DOMAIN-SUFFIX,edgeservices.bing.com #Bing边缘服务
 # > AI 对话 - 开源模型
   - DOMAIN-SUFFIX,mistral.ai #Mistral AI（法国）
   - DOMAIN-SUFFIX,chat.mistral.ai #Mistral聊天
@@ -140,7 +182,30 @@ payload:
   - DOMAIN-SUFFIX,picjumbo.com #免版税图片
   - DOMAIN-SUFFIX,stocksnap.io #免版税图片
   - DOMAIN-SUFFIX,pixelsquid.com #免版税3D素材
+# > AI 通用基础设施
+  - DOMAIN,browser-intake-datadoghq.com #Datadog监控
+  - DOMAIN,static.cloudflareinsights.com #Cloudflare Insights
+  - DOMAIN-SUFFIX,ai.com #AI.com
+  - DOMAIN-SUFFIX,algolia.net #Algolia搜索
+  - DOMAIN-SUFFIX,api.statsig.com #Statsig实验平台
+  - DOMAIN-SUFFIX,auth0.com #Auth0身份认证
+  - DOMAIN-SUFFIX,challenges.cloudflare.com #Cloudflare验证
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com #Arkose安全验证
+  - DOMAIN-SUFFIX,events.statsigapi.net #Statsig事件
+  - DOMAIN-SUFFIX,featuregates.org #Feature Gates
+  - DOMAIN-SUFFIX,host.livekit.cloud #LiveKit实时通信
+  - DOMAIN-SUFFIX,identrust.com #IdentTrust证书
+  - DOMAIN-SUFFIX,intercom.io #Intercom客服
+  - DOMAIN-SUFFIX,intercomcdn.com #Intercom CDN
+  - DOMAIN-SUFFIX,launchdarkly.com #LaunchDarkly特性开关
+  - DOMAIN-SUFFIX,observeit.net #ObserveIt监控
+  - DOMAIN-SUFFIX,segment.io #Segment数据分析
+  - DOMAIN-SUFFIX,sentry.io #Sentry错误监控
+  - DOMAIN-SUFFIX,stripe.com #Stripe支付
+  - DOMAIN-SUFFIX,turn.livekit.cloud #LiveKit TURN
+# > AI 服务 IP 地址
+  - IP-CIDR,24.199.123.28/32,no-resolve #AI服务IP
+  - IP-CIDR,64.23.132.171/32,no-resolve #AI服务IP
 # > 其他国外服务
   - DOMAIN-SUFFIX,imgix.com #图片处理/CDN
   - DOMAIN-SUFFIX,google-analytics.com #Google分析
-
