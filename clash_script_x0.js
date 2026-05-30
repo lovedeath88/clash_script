@@ -8,15 +8,25 @@ function main(config) {
   // TUN模式（必须开启）
   if (!config["tun"]) config["tun"] = {};
   config["tun"]["enable"] = true;
-  config["tun"]["stack"] = "system";
+  config["tun"]["stack"] = "mixed";
   config["tun"]["dns-hijack"] = ["any:53"];
   config["tun"]["strict-route"] = false;
   config["tun"]["auto-route"] = true;
   config["tun"]["auto-detect-interface"] = true;
 
-  // 防泄漏配置
+  // 防泄漏配置 + 满血 DNS
   if (!config["dns"]) config["dns"] = {};
-  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local"];
+  config["dns"]["enable"] = true;
+  config["dns"]["listen"] = "0.0.0.0:53";
+  config["dns"]["ipv6"] = false;
+  config["dns"]["enhanced-mode"] = "fake-ip";
+  config["dns"]["fake-ip-range"] = "198.18.0.1/16";
+  config["dns"]["fake-ip-filter-mode"] = "blacklist";
+  config["dns"]["fake-ip-filter"] = ["stun.*.*","stun.l.google.com","+.lan","+.local","+.*"];
+  config["dns"]["default-nameserver"] = ["223.5.5.5","114.114.114.114","1.1.1.1"];
+  config["dns"]["nameserver"] = ["https://doh.pub/dns-query","https://dns.alidns.com/dns-query","https://doh.dns.sb/dns-query"];
+  config["dns"]["fallback"] = ["https://doh.dns.sb/dns-query","https://dns.cloudflare.com/dns-query","https://dns.twnic.tw/dns-query"];
+  config["dns"]["fallback-filter"] = {"geoip": true,"geoip-code": "CN","gcid": ["www.baidu.com","www.qq.com"]};
 
   if (!config["rules"]) config["rules"] = [];
 
