@@ -7,19 +7,18 @@ payload:
   - DOMAIN-SUFFIX,share.dmhy.org #动漫花园
   - DOMAIN-SUFFIX,acg.rip #ACG动漫
   - DOMAIN-SUFFIX,girigirilove.com #giri番剧
-# > 国外乱七八糟
+# > 国外游戏
   - DOMAIN-SUFFIX,klei.com #科雷游戏
-  - DOMAIN-SUFFIX,jsdelivr.com #加速Github地址
   - DOMAIN-SUFFIX,anno1800.modhub.io #纪元1800
   - PROCESS-NAME,Anno1800.exe #纪元1800
-# > 国外编程相关
-  - PROCESS-NAME,git-bash.exe #git-bash.exe
-  - PROCESS-NAME,git-cmd.exe #git-cmd.exe
-  - PROCESS-NAME,git-gui.exe #git-gui.exe
-  - PROCESS-NAME,Codex.exe #Codex.exe
-  - PROCESS-NAME,python.exe #python.exe
-  - PROCESS-NAME,node.exe #node.exe #node.exe
-  - PROCESS-NAME,Code.exe #Code.exe
+
+# >> 直播平台
+  - DOMAIN-SUFFIX,twitch.tv #Twitch直播
+  - DOMAIN-SUFFIX,twitchcdn.net #Twitch CDN
+  - DOMAIN-SUFFIX,ttvnw.net #Twitch视频CDN
+  - DOMAIN-SUFFIX,ext-twitch.tv #Twitch扩展
+  - DOMAIN-SUFFIX,jtvnw.net #Twitch视频CDN备用
+  - DOMAIN-SUFFIX,twitchsvc.net #Twitch服务
 # > 品牌API平台
   - DOMAIN-SUFFIX,lovart.ai #lovart 
   - DOMAIN-SUFFIX,flowith.io #flowith
@@ -35,4 +34,56 @@ payload:
   - DOMAIN-SUFFIX,comfly.org #comfly
   - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
   - DOMAIN-KEYWORD,sillydream #sillydream
+# >> 容器镜像仓库
+  - DOMAIN-SUFFIX,docker.com #Docker容器平台
+  - DOMAIN-SUFFIX,docker.io #Docker镜像仓库
+  - DOMAIN-SUFFIX,gcr.io #Google容器镜像仓库
+  - DOMAIN-SUFFIX,ghcr.io #GitHub容器镜像仓库
+  - DOMAIN-SUFFIX,mcr.microsoft.com #微软容器镜像仓库
+  - DOMAIN-SUFFIX,quay.io #Red Hat容器镜像仓库
+  - DOMAIN-SUFFIX,registry.gitlab.com #GitLab容器镜像仓库
+
+# >> 开源/中间件
+  - DOMAIN-SUFFIX,apache.org #Apache软件基金会
+  - DOMAIN-SUFFIX,elastic.co #Elasticsearch
+  - DOMAIN-SUFFIX,elastic.com #Elasticsearch备用域名
+  - DOMAIN-SUFFIX,redhat.com #Red Hat
+  - DOMAIN-SUFFIX,sonatype.org #Sonatype
+
+# >> 开发者技术社区
+  - DOMAIN-SUFFIX,medium.com #Medium技术博客
+  - DOMAIN-SUFFIX,stackoverflow.com #Stack Overflow技术问答
+
+# >> Java 生态
+  - DOMAIN-SUFFIX,jitpack.io #JitPack依赖仓库
+  - DOMAIN-SUFFIX,maven.org #Maven构建工具
+  - DOMAIN-SUFFIX,mvnrepository.com #Maven仓库
+  - DOMAIN-SUFFIX,spring.io #Spring框架
+  - DOMAIN-SUFFIX,spring.net #Spring框架.NET版
+
+# >> 代码托管平台
+  - DOMAIN-SUFFIX,git.io #GitHub短链接
+  - DOMAIN-SUFFIX,github.io #GitHub Pages
+  - DOMAIN-SUFFIX,github.blog #GitHub官方博客
+  - DOMAIN-SUFFIX,githubassets.com #GitHub资源文件
+  - DOMAIN-SUFFIX,githubusercontent.com #GitHub用户内容
+  - DOMAIN-SUFFIX,githack.com #GitHub黑客松平台
+  - DOMAIN-SUFFIX,rawgit.com #GitHub原始文件CDN加速
+  - DOMAIN-SUFFIX,rawgithub.com #GitHub原始文件CDN加速
+  - DOMAIN-SUFFIX,gitlab.com #GitLab代码托管
+  - DOMAIN-SUFFIX,gitlab.io #GitLab Pages
+  - DOMAIN-SUFFIX,gitbooks.io #GitBook文档平台
+  - DOMAIN-SUFFIX,jsdelivr.com #开源CDN加速服务
+
+# >> Python 生态
+  - DOMAIN-SUFFIX,files.pythonhosted.org #Python包托管
+
+# >> 开发者进程
+  - PROCESS-NAME,git-bash.exe #Git Bash
+  - PROCESS-NAME,git-cmd.exe #Git CMD
+  - PROCESS-NAME,git-gui.exe #Git GUI
+  - PROCESS-NAME,Codex.exe #OpenAI Codex
+  - PROCESS-NAME,python.exe #Python
+  - PROCESS-NAME,node.exe #Node.js
+  - PROCESS-NAME,Code.exe #VS Code
 

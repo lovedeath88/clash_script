@@ -204,6 +204,7 @@ payload:
   - DOMAIN-SUFFIX,grazie.ai #JetBrains Grazie AI
   - DOMAIN-SUFFIX,grazie.aws.intellij.net #JetBrains Grazie AWS
   - DOMAIN-SUFFIX,sider.ai #Sider AI助手
+  - DOMAIN-SUFFIX,sourcegraph.com #Sourcegraph AI代码搜索
 
 # >> AI 应用生成
   - DOMAIN-SUFFIX,v0.dev #Vercel AI代码生成
@@ -222,6 +223,7 @@ payload:
 
 # >> 模型/数据集托管
   - DOMAIN-SUFFIX,huggingface.co #HuggingFace模型库
+  - DOMAIN-SUFFIX,hf.co #HuggingFace短域名
   - DOMAIN-SUFFIX,replicate.com #Replicate模型托管
   - DOMAIN-SUFFIX,civitai.com #Civitai模型社区
   - DOMAIN-SUFFIX,kaggle.com #Kaggle数据竞赛
@@ -233,6 +235,7 @@ payload:
   - DOMAIN-SUFFIX,coze.com #Coze AI平台
   - DOMAIN-SUFFIX,dify.ai #Dify AI平台
   - DOMAIN-SUFFIX,lmsys.org #LMSys AI评测
+  - DOMAIN-SUFFIX,lmstudio.ai #LM Studio本地AI模型工具
   - DOMAIN-SUFFIX,opera-api.com #Opera浏览器API
 
 # =============================================================================
