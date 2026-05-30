@@ -156,6 +156,13 @@ payload:
   - PROCESS-NAME,cloudmusic.exe #网易云音乐
   - PROCESS-NAME,BaiduNetdisk.exe #百度云盘
   - PROCESS-NAME,baidunetdiskhost.exe #百度云盘
+# > 国内编程相关
+  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
+  - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
+  - PROCESS-NAME,Qoder.exe #Qoder.exe
+  - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
+  - PROCESS-NAME,WorkBuddy.exe #WorkBuddy.exe
+  - PROCESS-NAME,Marvis.exe #Marvis.exe
 # > 乱七八糟-系统服务
   - PROCESS-NAME,smartscreen.exe
   - PROCESS-NAME,svchost.exe

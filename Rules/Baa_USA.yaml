@@ -12,11 +12,7 @@ payload:
   - DOMAIN-SUFFIX,jsdelivr.com #加速Github地址
   - DOMAIN-SUFFIX,anno1800.modhub.io #纪元1800
   - PROCESS-NAME,Anno1800.exe #纪元1800
-# > 编程相关
-  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
-  - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
-  - PROCESS-NAME,Qoder.exe #Qoder.exe
-  - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
+# > 国外编程相关
   - PROCESS-NAME,git-bash.exe #git-bash.exe
   - PROCESS-NAME,git-cmd.exe #git-cmd.exe
   - PROCESS-NAME,git-gui.exe #git-gui.exe
@@ -24,8 +20,6 @@ payload:
   - PROCESS-NAME,python.exe #python.exe
   - PROCESS-NAME,node.exe #node.exe #node.exe
   - PROCESS-NAME,Code.exe #Code.exe
-  - PROCESS-NAME,WorkBuddy.exe #WorkBuddy.exe
-  - PROCESS-NAME,Marvis.exe #Marvis.exe
 # > 品牌API平台
   - DOMAIN-SUFFIX,lovart.ai #lovart 
   - DOMAIN-SUFFIX,flowith.io #flowith
