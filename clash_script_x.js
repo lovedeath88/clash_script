@@ -31,6 +31,7 @@ function main(config) {
   if (!config["rules"]) config["rules"] = [];
 
   // ====================== 代理组配置 ======================
+  // ==================== 不禁用倍率模式 ======================
   const groupBaseOption = {
     "interval": 180,
     "timeout": 3000,
