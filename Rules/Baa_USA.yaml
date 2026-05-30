@@ -1,146 +1,43 @@
 payload:
-# > AI 对话 - 商业
-  - DOMAIN-SUFFIX,chatgpt.com #ChatGPT
-  - DOMAIN-SUFFIX,chat.openai.com #ChatGPT网页版
-  - DOMAIN-SUFFIX,openai.com #OpenAI官网
-  - DOMAIN-SUFFIX,platform.openai.com #OpenAI平台
-  - DOMAIN-SUFFIX,perplexity.ai #AI搜索引擎
-  - DOMAIN-SUFFIX,poe.com #Quora AI聊天平台
-  - DOMAIN-SUFFIX,character.ai #AI角色扮演
-  - DOMAIN-SUFFIX,claude.com #Anthropic Claude
-  - DOMAIN-SUFFIX,claude.ai #Claude聊天
-  - DOMAIN-SUFFIX,gemini.google.com #Google Gemini
-  - DOMAIN-SUFFIX,aistudio.google.com #Google AI Studio
-  - DOMAIN-SUFFIX,labs.google.com #Google AI实验室
-  - DOMAIN-SUFFIX,stitch.withgoogle.com #Google Stitch
-  - DOMAIN-SUFFIX,copilot.microsoft.com #Microsoft Copilot
-  - DOMAIN-SUFFIX,grok.com #xAI Grok
-  - DOMAIN-SUFFIX,x.ai #xAI官网
-  - DOMAIN-SUFFIX,you.com #You.com AI搜索
-  - DOMAIN-SUFFIX,inflection.ai #Inflection AI
-  - DOMAIN-SUFFIX,pi.ai #Pi AI
-  - DOMAIN-SUFFIX,meta.ai #Meta AI
-# > AI 对话 - 开源模型
-  - DOMAIN-SUFFIX,mistral.ai #Mistral AI（法国）
-  - DOMAIN-SUFFIX,chat.mistral.ai #Mistral聊天
-  - DOMAIN-SUFFIX,cohere.com #Cohere
-# > AI 图像生成 - 文生图
-  - DOMAIN-SUFFIX,midjourney.com #Midjourney
-  - DOMAIN-SUFFIX,ideogram.ai #Ideogram文生图
-  - DOMAIN-SUFFIX,leonardo.ai #Leonardo AI画图
-  - DOMAIN-SUFFIX,stability.ai #Stable Diffusion
-  - DOMAIN-SUFFIX,dalle.com #OpenAI DALL·E
-  - DOMAIN-SUFFIX,firefly.adobe.com #Adobe Firefly
-  - DOMAIN-SUFFIX,openclaw.ai #OpenClaw
-  - DOMAIN-SUFFIX,krea.ai #画画用的
-  - DOMAIN-SUFFIX,getimg.ai #AI图像生成
-  - DOMAIN-SUFFIX,playgroundai.com #Playground AI
-  - DOMAIN-SUFFIX,tensor.art #Tensor Art模型
-  - DOMAIN-SUFFIX,mage.space #Mage Space画图
-  - DOMAIN-SUFFIX,recraft.ai #AI设计工具
-# > AI 图像生成 - 图像编辑
-  - DOMAIN-SUFFIX,clipdrop.co #Clipdrop AI编辑
-  - DOMAIN-SUFFIX,photoroom.com #AI抠图/编辑
-  - DOMAIN-SUFFIX,magnific.ai #AI图像增强
-# > AI 图像生成 - ComfyUI
-  - DOMAIN-SUFFIX,comfy.icu #ComfyUI云端
-  - DOMAIN-SUFFIX,cloud.comfy.org #ComfyUI云平台
-  - DOMAIN-SUFFIX,supagruen.github.io #艺术家风格训练
-# > AI 视频生成
-  - DOMAIN-SUFFIX,runwayml.com #Runway AI视频
-  - DOMAIN-SUFFIX,pika.art #Pika AI视频
-  - DOMAIN-SUFFIX,genspark.ai #GenSpark
-  - DOMAIN-SUFFIX,synthesia.io #Synthesia数字人
-  - DOMAIN-SUFFIX,heygen.com #HeyGen数字人
-  - DOMAIN-SUFFIX,veed.io #Veed在线视频编辑
-  - DOMAIN-SUFFIX,vidnoz.com #Vidnoz AI视频
-  - DOMAIN-SUFFIX,invideo.io #AI视频生成
-  - DOMAIN-SUFFIX,descript.com #AI视频/音频编辑
-  - DOMAIN-SUFFIX,lumalabs.ai #Luma Dream Machine
-  - DOMAIN-SUFFIX,haiper.ai #AI视频生成
-# > AI 音乐/音频
-  - DOMAIN-SUFFIX,suno.ai #Suno AI音乐
-  - DOMAIN-SUFFIX,elevenlabs.io #ElevenLabs语音克隆
-  - DOMAIN-SUFFIX,udio.com #Udio AI音乐
-  - DOMAIN-SUFFIX,musicfy.live #Musicfy AI音乐
-  - DOMAIN-SUFFIX,mubert.com #Mubert AI音乐
-  - DOMAIN-SUFFIX,voicemod.net #Voicemod变声器
-  - DOMAIN-SUFFIX,soundraw.io #AI音乐生成
-  - DOMAIN-SUFFIX,boomy.com #AI音乐制作
-  - DOMAIN-SUFFIX,riffusion.com #AI音乐生成
-# > AI 开发 - AI IDE/代码生成
-  - DOMAIN-SUFFIX,cursor.com #Cursor AI IDE
-  - DOMAIN-SUFFIX,cursor.sh #Cursor IDE
-  - DOMAIN-SUFFIX,windsurf.ai #AI IDE
-  - DOMAIN-SUFFIX,v0.dev #Vercel AI代码生成
-  - DOMAIN-SUFFIX,bolt.new #AI全栈生成
-  - DOMAIN-SUFFIX,lovable.dev #AI应用构建
-  - DOMAIN-SUFFIX,phind.com #AI编程搜索
-  - DOMAIN-SUFFIX,replit.com #在线IDE
-  - DOMAIN-SUFFIX,github.dev #GitHub Codespaces
-  - DOMAIN-SUFFIX,gitpod.io #Gitpod在线IDE
-  - DOMAIN-SUFFIX,codesandbox.io #CodeSandbox
-# > AI 开发 - 模型托管/平台
-  - DOMAIN-SUFFIX,huggingface.co #HuggingFace模型库
-  - DOMAIN-SUFFIX,replicate.com #Replicate模型托管
-  - DOMAIN-SUFFIX,civitai.com #Civitai模型社区
-  - DOMAIN-SUFFIX,kaggle.com #Kaggle数据竞赛
-  - DOMAIN-SUFFIX,gradio.app #Gradio ML演示
-  - DOMAIN-SUFFIX,modal.com #AI云平台
-  - DOMAIN-SUFFIX,banana.dev #AI推理平台
-# > AI 写作
-  - DOMAIN-SUFFIX,grammarly.com #Grammarly写作助手
-  - DOMAIN-SUFFIX,jasper.ai #Jasper AI写作
-  - DOMAIN-SUFFIX,rytr.me #Rytr AI写作
-  - DOMAIN-SUFFIX,writesonic.com #Writesonic AI写作
-  - DOMAIN-SUFFIX,copy.ai #Copy AI营销文案
-  - DOMAIN-SUFFIX,quillbot.com #QuillBot改写润色
-  - DOMAIN-SUFFIX,flowith.io #AI写作
-  - DOMAIN-SUFFIX,deepl.com #DeepL翻译
-# > AI 笔记/会议
-  - DOMAIN-SUFFIX,notion.site #Notion笔记
-  - DOMAIN-SUFFIX,notion.ai #Notion AI
-  - DOMAIN-SUFFIX,notebooklm.google.com #Google NotebookLM
-  - DOMAIN-SUFFIX,fireflies.ai #AI会议笔记
-  - DOMAIN-SUFFIX,otter.ai #AI会议转录
-  - DOMAIN-SUFFIX,mem.ai #AI笔记
-  - DOMAIN-SUFFIX,taskade.com #AI协作
-# > AI 演示
-  - DOMAIN-SUFFIX,gamma.app #Gamma AI演示
-  - DOMAIN-SUFFIX,tome.app #Tome AI演示
-  - DOMAIN-SUFFIX,beautiful.ai #Beautiful.ai演示
-# > AI 搜索
-  - DOMAIN-SUFFIX,consensus.app #Consensus学术搜索
-  - DOMAIN-SUFFIX,scispace.com #SciSpace学术搜索
-  - DOMAIN-SUFFIX,elicit.com #Elicit学术搜索
-  - DOMAIN-SUFFIX,semanticscholar.org #Semantic Scholar
-  - DOMAIN-SUFFIX,searchgate.net #SearchGate学术
-# > AI 艺术/创意
-  - DOMAIN-SUFFIX,openart.ai #AI艺术
-  - DOMAIN-SUFFIX,artstation.com #A站
-  - DOMAIN-SUFFIX,dribbble.com #追波
-  - DOMAIN-SUFFIX,pinterest.com #国外花瓣
-  - DOMAIN-SUFFIX,pixiv.net #P站插画
-  - DOMAIN-SUFFIX,behance.net #Behance设计社区
-# > 3D/CG 设计软件
-  - DOMAIN-SUFFIX,maxon.net #C4D官网
-  - DOMAIN-SUFFIX,sidefx.com #Houdini官网
-  - DOMAIN-SUFFIX,blender.org #Blender
-  - DOMAIN-SUFFIX,otoy.com #Octane Render
-# > 付费图片素材
-  - DOMAIN-SUFFIX,flickr.com #Flickr
-  - DOMAIN-SUFFIX,123rf.com #123RF
-  - DOMAIN-SUFFIX,shutterstock.com #Shutterstock
-  - DOMAIN-SUFFIX,stock.adobe.com #Adobe stock
-  - DOMAIN-SUFFIX,depositphotos.com #Depositphotos
-  - DOMAIN-SUFFIX,dreamstime.com #Dreamstime
-  - DOMAIN-SUFFIX,istockphoto.com #Istockphoto
-  - DOMAIN-SUFFIX,vectorstock.com #Vectorstock
-  - DOMAIN-SUFFIX,pixabay.com #免版税图片
-  - DOMAIN-SUFFIX,picjumbo.com #免版税图片
-  - DOMAIN-SUFFIX,stocksnap.io #免版税图片
-  - DOMAIN-SUFFIX,pixelsquid.com #免版税3D素材
-# > 其他国外服务
-  - DOMAIN-SUFFIX,imgix.com #图片处理/CDN
-  - DOMAIN-SUFFIX,google-analytics.com #Google分析
+# > 番剧种子
+  - DOMAIN-SUFFIX,comicat.org #漫猫动漫
+  - DOMAIN-SUFFIX,mikanani.me #蜜柑计划
+  - DOMAIN-SUFFIX,bangumi.moe #萌番组
+  - DOMAIN-SUFFIX,kisssub.org #爱恋动漫
+  - DOMAIN-SUFFIX,share.dmhy.org #动漫花园
+  - DOMAIN-SUFFIX,acg.rip #ACG动漫
+  - DOMAIN-SUFFIX,girigirilove.com #giri番剧
+# > 国外乱七八糟
+  - DOMAIN-SUFFIX,klei.com #科雷游戏
+  - DOMAIN-SUFFIX,jsdelivr.com #加速Github地址
+  - DOMAIN-SUFFIX,anno1800.modhub.io #纪元1800
+  - PROCESS-NAME,Anno1800.exe #纪元1800
+# > 编程相关
+  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
+  - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
+  - PROCESS-NAME,Qoder.exe #Qoder.exe
+  - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
+  - PROCESS-NAME,git-bash.exe #git-bash.exe
+  - PROCESS-NAME,git-cmd.exe #git-cmd.exe
+  - PROCESS-NAME,git-gui.exe #git-gui.exe
+  - PROCESS-NAME,Codex.exe #Codex.exe
+  - PROCESS-NAME,python.exe #python.exe
+  - PROCESS-NAME,node.exe #node.exe #node.exe
+  - PROCESS-NAME,Code.exe #Code.exe
+  - PROCESS-NAME,WorkBuddy.exe #WorkBuddy.exe
+  - PROCESS-NAME,Marvis.exe #Marvis.exe
+# > 品牌API平台
+  - DOMAIN-SUFFIX,lovart.ai #lovart 
+  - DOMAIN-SUFFIX,flowith.io #flowith
+  - DOMAIN-SUFFIX,tapnow.ai #tapnow
+  - DOMAIN-SUFFIX,genspark.ai #genspark
+  - DOMAIN-SUFFIX,vectary.com #vectary画图
+# > 中转API平台
+  - DOMAIN-SUFFIX,loveapi.org #loveapi
+  - DOMAIN-SUFFIX,gemai.cc #哈基米
+  - DOMAIN-SUFFIX,blcay.ai #帕拉图
+  - DOMAIN-SUFFIX,t8star.org #贞贞
+  - DOMAIN-SUFFIX,comfly.org #comfly
+  - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
+  - DOMAIN-KEYWORD,sillydream #sillydream
 
