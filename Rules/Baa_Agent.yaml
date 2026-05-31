@@ -156,6 +156,12 @@ payload:
   - DOMAIN-KEYWORD,apple-relay.apple.com #Apple中继
   - DOMAIN,apple-relay.cloudflare.com #Apple中继Cloudflare
   - DOMAIN-KEYWORD,apple-relay.cloudflare.com #Apple中继Cloudflare
+  - DOMAIN-SUFFIX,apple-ready.fastly-edge.com #Apple CDN边缘节点
+  - DOMAIN-SUFFIX,cp4.cloudflare.com #Apple/Cloudflare中继
+  - DOMAIN-SUFFIX,gateway.icloud.com #iCloud网关
+  - DOMAIN-SUFFIX,guzzoni.apple.com #Apple Siri/智能服务
+  - DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com #Apple定位/智能服务
+  - DOMAIN-SUFFIX,smoot.apple.com #Apple AI服务端
 
 # >> AI 搜索引擎
   - DOMAIN-SUFFIX,perplexity.ai #AI搜索引擎
