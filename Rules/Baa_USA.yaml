@@ -33,15 +33,6 @@ payload:
   - DOMAIN-SUFFIX,tapnow.ai #tapnow
   - DOMAIN-SUFFIX,genspark.ai #genspark
   - DOMAIN-SUFFIX,vectary.com #vectary画图
-# > 中转API平台
-  - DOMAIN-SUFFIX,loveapi.org #loveapi
-  - DOMAIN-SUFFIX,api.xzzzzz.com #xzzzzz.com
-  - DOMAIN-SUFFIX,gemai.cc #哈基米
-  - DOMAIN-SUFFIX,blcay.ai #帕拉图
-  - DOMAIN-SUFFIX,t8star.org #贞贞
-  - DOMAIN-SUFFIX,comfly.org #comfly
-  - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
-  - DOMAIN-KEYWORD,sillydream #sillydream
 # >> 容器镜像仓库
   - DOMAIN-SUFFIX,docker.com #Docker容器平台
   - DOMAIN-SUFFIX,docker.io #Docker镜像仓库

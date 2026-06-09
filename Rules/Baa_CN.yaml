@@ -166,6 +166,15 @@ payload:
 # > 乱七八糟-系统服务
   - PROCESS-NAME,smartscreen.exe
   - PROCESS-NAME,svchost.exe
+# > 中转API平台
+  - DOMAIN-SUFFIX,loveapi.org #loveapi
+  - DOMAIN-SUFFIX,api.xzzzzz.com #xzzzzz.com
+  - DOMAIN-SUFFIX,gemai.cc #哈基米
+  - DOMAIN-SUFFIX,blcay.ai #帕拉图
+  - DOMAIN-SUFFIX,t8star.org #贞贞
+  - DOMAIN-SUFFIX,comfly.org #comfly
+  - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
+  - DOMAIN-KEYWORD,sillydream #sillydream
 # > 一些垃圾网站
   - DOMAIN-SUFFIX,haodanku.com
   - DOMAIN-SUFFIX,zzbtool.com
