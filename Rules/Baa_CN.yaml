@@ -100,6 +100,7 @@ payload:
   - DOMAIN-SUFFIX,badjs.weixinbridge.com #微信公众号文章
 # > 在线生图Ai平台
   - DOMAIN-SUFFIX,liblib.art #哩布哩布AI
+  - DOMAIN-SUFFIX,liblib.tv #liblib.tv
   - DOMAIN-SUFFIX,runninghub.cn #RH平台ai
   - DOMAIN-SUFFIX,haiyi.art #海艺AI
   - DOMAIN-SUFFIX,jimeng.jianying.com #即梦AI
@@ -156,6 +157,7 @@ payload:
   - PROCESS-NAME,cloudmusic.exe #网易云音乐
   - PROCESS-NAME,BaiduNetdisk.exe #百度云盘
   - PROCESS-NAME,baidunetdiskhost.exe #百度云盘
+
 # > 国内编程相关
   - PROCESS-NAME,Trae CN.exe #Trae CN.exe
   - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
@@ -163,9 +165,30 @@ payload:
   - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
   - PROCESS-NAME,WorkBuddy.exe #WorkBuddy.exe
   - PROCESS-NAME,Marvis.exe #Marvis.exe
-# > 乱七八糟-系统服务
-  - PROCESS-NAME,smartscreen.exe
-  - PROCESS-NAME,svchost.exe
+  - PROCESS-NAME,CodeBuddy.exe #CodeBuddy.exe
+
+# >> 系统服务（直连）
+  - PROCESS-NAME,smartscreen.exe #Windows SmartScreen安全筛选
+  - PROCESS-NAME,svchost.exe #Windows服务主机
+
+# >> 需直连的服务
+  - DOMAIN,app.adjust.com #移动归因统计
+  - DOMAIN,app.appsflyer.com #移动归因统计
+  - DOMAIN,bdtj.tagtic.cn #百度统计
+  - DOMAIN,log.mmstat.com #阿里埋点统计
+  - DOMAIN,sycm.mmstat.com #阿里生意参谋
+  - DOMAIN,safebrowsing.googleapis.com #Google安全浏览
+  - DOMAIN,safebrowsing.googleapis-cn.com #Google安全浏览国内版
+  - DOMAIN,safebrowsing.clients.google.com #安全浏览客户端
+  - DOMAIN,safebrowsing-cache.google.com #安全浏览缓存
+  - DOMAIN,fairplay.l.qq.com #腾讯视频DRM
+  - DOMAIN,livew.l.qq.com #腾讯视频直播
+  - DOMAIN,vd.l.qq.com #腾讯视频分发
+  - DOMAIN,vi.l.qq.com #腾讯视频资源
+  - DOMAIN,analytics.strava.com #Strava运动分析
+  - DOMAIN,msg.umeng.com #友盟推送统计
+  - DOMAIN,msg.umengcloud.com #友盟云推送统计
+
 # > 中转API平台
   - DOMAIN-SUFFIX,loveapi.org #loveapi
   - DOMAIN-SUFFIX,api.xzzzzz.com #xzzzzz.com
@@ -175,14 +198,15 @@ payload:
   - DOMAIN-SUFFIX,comfly.org #comfly
   - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
   - DOMAIN-KEYWORD,sillydream #sillydream
-# > 一些垃圾网站
-  - DOMAIN-SUFFIX,haodanku.com
-  - DOMAIN-SUFFIX,zzbtool.com
-  - DOMAIN-SUFFIX,571xz.com
-  - DOMAIN-SUFFIX,sso.jd.hk
-  - DOMAIN-KEYWORD,adobe,REJECT
-  - DOMAIN-SUFFIX,adobe.com,REJECT
-  - DOMAIN-SUFFIX,adobe.io,REJECT
+
+# >> 自定义/拦截站点
+  - DOMAIN-SUFFIX,haodanku.com #好单库（返利/导购）
+  - DOMAIN-SUFFIX,zzbtool.com #电商至尊宝
+  - DOMAIN-SUFFIX,dangxun.com #电商哈士奇
+  - DOMAIN-SUFFIX,sso.jd.hk #京东香港SSO登录
+  - DOMAIN-KEYWORD,adobe,REJECT #Adobe全家桶拦截
+  - DOMAIN-SUFFIX,adobe.com,REJECT #Adobe官网拦截
+  - DOMAIN-SUFFIX,adobe.io,REJECT #Adobe开发者平台拦截
     
 
 
