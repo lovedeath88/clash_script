@@ -194,8 +194,6 @@ payload:
   - DOMAIN-SUFFIX,api.xzzzzz.com #xzzzzz.com
   - DOMAIN-SUFFIX,gemai.cc #哈基米
   - DOMAIN-SUFFIX,blcay.ai #帕拉图
-  - DOMAIN-SUFFIX,t8star.org #贞贞
-  - DOMAIN-SUFFIX,comfly.org #comfly
   - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
   - DOMAIN-KEYWORD,sillydream #sillydream
 
