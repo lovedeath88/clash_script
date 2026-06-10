@@ -189,6 +189,14 @@ payload:
   - DOMAIN,msg.umeng.com #友盟推送统计
   - DOMAIN,msg.umengcloud.com #友盟云推送统计
 
+# > 中转API平台
+  - DOMAIN-SUFFIX,loveapi.org #loveapi
+  - DOMAIN-SUFFIX,api.xzzzzz.com #xzzzzz.com
+  - DOMAIN-SUFFIX,gemai.cc #哈基米
+  - DOMAIN-SUFFIX,blcay.ai #帕拉图
+  - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
+  - DOMAIN-KEYWORD,sillydream #sillydream
+
 # >> 自定义/拦截站点
   - DOMAIN-SUFFIX,haodanku.com #好单库（返利/导购）
   - DOMAIN-SUFFIX,zzbtool.com #电商至尊宝
