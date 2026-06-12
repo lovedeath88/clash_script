@@ -1,5 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,cn,DIRECT # 匹配所有 .cn 域名
+  - DOMAIN-SUFFIX,161725.xyz #个性域名
 # > 影视音乐
   - DOMAIN-SUFFIX,yinfans.me #音丝范（电影下载）
   - DOMAIN-SUFFIX,eacg1.com #番剧
