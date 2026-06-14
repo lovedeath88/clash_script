@@ -89,3 +89,59 @@ payload:
   - PROCESS-NAME,node.exe #Node.js
   - PROCESS-NAME,Code.exe #VS Code
 
+# >> Adobe 服务（子域名补充）
+  - DOMAIN,firefly.adobe.com #Adobe Firefly
+  - DOMAIN,firefly-ai.adobe.io #Adobe Firefly AI
+  - DOMAIN,firefly-cliov2.adobe.com #Adobe Firefly Clio
+  - DOMAIN,firefly-ps.adobe.io #Adobe Firefly PS
+  - DOMAIN,clio-assets.adobe.com #Adobe Clio资源
+  - DOMAIN,dc-genai-access-provisioning-api.adobe.io #Adobe GenAI API
+  - DOMAIN,dc-genai-content-platform.adobe.io #Adobe GenAI内容
+  - DOMAIN,dc-genai-persistence.adobe.io #Adobe GenAI持久化
+  - DOMAIN,senseimds.adobe.io #Adobe Sensei MDS
+  - DOMAIN,senseicore.adobe.io #Adobe Sensei Core
+  - DOMAIN,mds-cdn.infra.adobesensei.io #Adobe Sensei CDN
+  - DOMAIN,pre-signed-firefly-prod.s3.amazonaws.com #Firefly S3
+  - DOMAIN,pre-signed-firefly-prod.s3-accelerate.amazonaws.com #Firefly S3加速
+
+# >> 基础设施 / CDN / 支付
+  - DOMAIN,challenges.cloudflare.com #Cloudflare验证挑战
+  - DOMAIN,gateway.ai.cloudflare.com #Cloudflare AI网关
+  - DOMAIN-SUFFIX,cp2.cloudflare.com #Cloudflare CP2
+  - DOMAIN,js.stripe.com #Stripe JS
+  - DOMAIN-SUFFIX,stripe.network #Stripe网络
+  - DOMAIN-SUFFIX,stripecdn.com #Stripe CDN
+  - DOMAIN-SUFFIX,arkoselabs.com #Arkose安全验证
+  - DOMAIN,host.livekit.cloud #LiveKit主机
+  - DOMAIN,turn.livekit.cloud #LiveKit TURN
+
+# >> 数据分析 / 监控 / 实验平台
+  - DOMAIN-SUFFIX,segment.com #Segment数据分析
+  - DOMAIN-SUFFIX,segmentify.com #Segmentify
+  - DOMAIN-SUFFIX,statsig.com #Statsig实验
+  - DOMAIN-SUFFIX,featureassets.org #Feature Assets
+  - DOMAIN-SUFFIX,prodregistryv2.org #ProdRegistry
+  - DOMAIN-SUFFIX,honeycomb.io #Honeycomb监控
+  - DOMAIN-SUFFIX,ct.sendgrid.net #SendGrid邮件
+
+# >> 效率 / 生产力工具
+  - DOMAIN-SUFFIX,any.do #Any.do待办
+  - DOMAIN-SUFFIX,asana.com #Asana项目管理
+  - DOMAIN-SUFFIX,asana.biz #Asana商务
+  - DOMAIN-SUFFIX,buffer.com #Buffer社媒
+  - DOMAIN-SUFFIX,bufferapp.com #Buffer App
+  - DOMAIN-SUFFIX,zapier.com #Zapier自动化
+  - DOMAIN-SUFFIX,slidesgo.com #Slidesgo PPT模板
+  - DOMAIN-SUFFIX,tealhq.com #Teal HQ效率工具
+  - DOMAIN-SUFFIX,wondershare.com #万兴软件
+  - DOMAIN-SUFFIX,wp.com #WordPress
+  - DOMAIN-SUFFIX,suno.com #Suno音乐
+  - DOMAIN-SUFFIX,clock.isc.org #ISC时钟
+  - DOMAIN-SUFFIX,bingapis.com #Bing APIs
+  - DOMAIN,edgeservices.bing.com #Bing边缘服务
+
+# >> 遗漏的 AI / 开发工具
+  - DOMAIN,chat.mistral.ai #Mistral聊天
+  - DOMAIN-SUFFIX,diabrowser.com #Dia浏览器主域名
+  - DOMAIN,dia-blocklists-release.diabrowser.engineering #Dia广告拦截
+
