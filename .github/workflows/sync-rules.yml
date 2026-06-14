@@ -33,20 +33,98 @@ jobs:
 
           # ====== 配置 ======
           REMOTE_URL = "https://raw.githubusercontent.com/shangrenxi/Rules/refs/heads/master/rules/AI.list"
-          RULE_FILES = [
-              "Rules/Baa_Agent.yaml",
-              "Rules/Baa_USA.yaml",
-              "Rules/Baa_CN.yaml",
+          AGENT_FILE = "Rules/Baa_Agent.yaml"
+          USA_FILE = "Rules/Baa_USA.yaml"
+          RULE_FILES = [AGENT_FILE, USA_FILE, "Rules/Baa_CN.yaml"]
+
+          # 跳过的关键词（NTP / 时间服务器等非 AI 规则）
+          SKIP_KEYWORDS = [
+              'time.', 'ntp.', 'pool.ntp', 'utcnist', 'ut1-', 's2csntp',
+              'apple-relay',
           ]
-          TARGET_FILE = "Rules/Baa_Agent.yaml"
+
+          # 分类映射：AI 相关 -> Baa_Agent.yaml
+          AI_KEYWORDS_MAP = {
+              'anthropic_claude': ['clau.de', 'claude', 'anthropic', 'datadog', 'sift'],
+              'openai_chatgpt': ['openai', 'chatgpt', 'dalle.com', 'oai', 'workos', 'sentry.io', 'humb.apple'],
+              'coze_cici_bytedance': ['coze', 'cici', 'dola', 'byted', 'byteoversea', 'yhgfb', 'itobsns',
+                                      'appsflyer', 'oceanapi', 'pipopay', 'ttwstatic', 'byteintlapi'],
+              'google_gemini': ['gemini', 'googleapis', 'gstatic', 'ggpht', 'ytimg',
+                                'doubleclick', 'googletagmanager', 'google-analytics', 'antigravity',
+                                'aida.goo', 'open-vsx', 'exp-tas', 'cloudcode-pa', 'opal.',
+                                'learnyourway', 'stax.withgoogle', 'csp.withgoogle', 'colab',
+                                'firebase.studio', 'notebooklm.goog', 'jules.google', 'withgoogle',
+                                'autodraw', 'secretmanager.goog', 'aiplatform.goog',
+                                'cloudacompanion.goog', 'lcontent-', 'ipv4.google', 'clients6.',
+                                'clients4.', 'h3.google', 'ogs.google', 'g.ai', 'ai.google',
+                                'fonts.googleapis', 'fonts.gstatic', 'ssl.gstatic', 'maps.gstatic',
+                                'oauth2.googleapis', 'content-autofill', 'speech.googleapis',
+                                'www.googleapis', 'www.googletagmanager', 'maps.googleapis',
+                                'googleads.g', 'static.doubleclick', 'td.doubleclick',
+                                'labs.google'],
+              'meta_ai': ['meta.com/ai', 'meta.com/imagine', 'llama.com', 'imagine.meta'],
+              'microsoft_copilot_azure': ['copilot.cloud.microsoft', 'copilotstudio.microsoft',
+                                          'm365copilot', 'msunlimitedcloudsummit', 'microsoftcloudsummit',
+                                          'cortana.ai', 'githubcopilot.com', 'playwright.azureedge',
+                                          'search.windows.net', 'inference.ml.azure', 'azureml.ms',
+                                          'customtranslator.azure', 'cognitiveservices.azure',
+                                          'api.cognitive.microsoft', 'api.cognitive.azure',
+                                          'stt.speech.azure'],
+              'mistral_perplexity_poe_xai': ['mistral.ai/console', 'perplexity-ai.cloudflareaccess',
+                                             'pplx-res.cloudinary', 'perplexity.ai', 'pplx.ai',
+                                             'poecdn.net', 'api.x.ai', 'xai.chronosphere',
+                                             'hyperbolic'],
+              'adobe_canva_design': ['adobe.com/clio', 'dc-genai.adobe', 'firefly-api.adobe',
+                                     'sensei.adobe', 'canva.site', 'canva.dev', 'canva.com',
+                                     'zeetings.com', 'smartmockups.com', 'fal.ai'],
+              'dev_tools_ide_browser': ['trae-api-sg.mchost.guru', 'trae.ai', 'traeapi.us',
+                                        'factory.ai', 'api.jetbrains.ai', 'jetbrains.ai',
+                                        'vercel.com', 'vercel.sh', 'ethyca.com', 'zed.dev',
+                                        'codebuddy.ai', 'kiro.dev', 'devv.ai', 'devv.featurebase',
+                                        'arc.net', 'diabrowser.engineering', 'deta.space',
+                                        'deta.surf', 'strawberrybucket.xyz', 'strawberrybrowserapi'],
+              'api_providers': ['openrouter.ai', 'together.ai', 'jina.ai', 'api.hyperbolic.xyz',
+                               'hyperbolic.ai'],
+          }
+
+          # 非但属于国外服务的规则 -> Baa_USA.yaml（基础设施、效率工具等）
+          USA_KEYWORDS_MAP = {
+              'usa_adobe_subdomain': ['firefly.adobe.com', 'firefly-ai.adobe.io', 'firefly-cliov2.adobe.com',
+                                      'firefly-ps.adobe.io', 'clio-assets.adobe.com', 'dc-genai-',
+                                      'senseimds.adobe.io', 'senseicore.adobe.io', 'mds-cdn.infra.adobesensei.io',
+                                      'pre-signed-firefly'],
+              'usa_infra_cdns_payment': ['challenges.cloudflare.com', 'gateway.ai.cloudflare.com',
+                                         'cp2.cloudflare.com', 'js.stripe.com', 'stripe.network',
+                                         'stripecdn.com', 'arkoselabs.com', 'host.livekit.cloud',
+                                         'turn.livekit.cloud'],
+              'usa_analytics_monitoring': ['segment.com', 'segmentify.com', 'statsig.com',
+                                           'featureassets.org', 'prodregistryv2.org', 'honeycomb.io',
+                                           'ct.sendgrid.net'],
+              'usa_productivity_tools': ['any.do', 'asana.com', 'asana.biz', 'buffer.com',
+                                         'bufferapp.com', 'zapier.com', 'slidesgo.com', 'tealhq.com',
+                                         'wondershare.com', 'wp.com', 'suno.com', 'clock.isc.org',
+                                         'bingapis.com', 'edgeservices.bing.com'],
+          }
           # ==================
+
+          def is_ai_related(rule):
+              for kw in SKIP_KEYWORDS:
+                  if kw.lower() in rule.lower():
+                      return False
+              return True
+
+          def classify_rule(rule, keywords_map):
+              for cat, kws in keywords_map.items():
+                  for kw in kws:
+                      if kw.lower() in rule.lower():
+                          return cat
+              return None
 
           print(">>> 下载远程 AI.list ...")
           req = urllib.request.Request(REMOTE_URL, headers={"User-Agent": "Mozilla/5.0"})
           with urllib.request.urlopen(req, timeout=30) as resp:
               remote_content = resp.read().decode("utf-8")
 
-          # 解析远程规则（去掉注释和空行）
           remote_rules = set()
           for line in remote_content.splitlines():
               line = line.strip()
@@ -54,49 +132,114 @@ jobs:
                   continue
               remote_rules.add(line)
 
-          print(f">>> 远程共 {len(remote_rules)} 条规则")
-
-          # 解析所有本地规则文件中的已有规则
           all_local_rules = set()
           for fpath in RULE_FILES:
               if os.path.exists(fpath):
                   with open(fpath, "r", encoding="utf-8") as f:
                       content = f.read()
-                  # 提取 payload 下的每条规则
                   for m in re.finditer(r"^  - (.+)$", content, re.MULTILINE):
-                      rule = m.group(1).split("#")[0].strip()  # 去掉注释部分
+                      rule = m.group(1).split("#")[0].strip()
                       if rule:
                           all_local_rules.add(rule)
 
-          print(f">>> 本地三个文件共 {len(all_local_rules)} 条规则")
-
-          # 找出缺失的规则
           missing = sorted(remote_rules - all_local_rules)
 
           if not missing:
               print(">>> 没有新规则，无需更新")
               exit(0)
 
-          print(f">>> 发现 {len(missing)} 条新规则，正在合并到 {TARGET_FILE} ...")
+          print(f">>> 远程 {len(remote_rules)} 条，本地 {len(all_local_rules)} 条")
+          print(f">>> 发现 {len(missing)} 条缺失规则")
 
-          # 读取目标文件并追加
-          with open(TARGET_FILE, "r", encoding="utf-8") as f:
-              lines = f.readlines()
+          # 过滤 NTP / 时间服务器
+          ai_missing = [r for r in missing if is_ai_related(r)]
+          skipped = [r for r in missing if not is_ai_related(r)]
+          print(f">>> AI相关: {len(ai_missing)}, 跳过(NTP/时间): {len(skipped)}")
 
-          # 在文件末尾追加新规则
-          new_lines = []
-          new_lines.append("\n")
-          new_lines.append(f"# >> 自动同步 ({datetime.now().strftime('%Y-%m-%d')})\n")
-          for rule in missing:
-              new_lines.append(f"  - {rule}\n")
+          # 分类到 Agent 或 USA
+          agent_rules = {}
+          usa_rules = {}
+          uncategorized = []
 
-          with open(TARGET_FILE, "a", encoding="utf-8") as f:
-              f.writelines(new_lines)
+          for rule in ai_missing:
+              cat = classify_rule(rule, AI_KEYWORDS_MAP)
+              if cat:
+                  agent_rules.setdefault(cat, []).append(rule)
+                  continue
+              cat = classify_rule(rule, USA_KEYWORDS_MAP)
+              if cat:
+                  usa_rules.setdefault(cat, []).append(rule)
+                  continue
+              uncategorized.append(rule)
 
-          print(f">>> 已追加 {len(missing)} 条新规则:")
-          for r in missing:
-              print(f"    + {r}")
+          # 输出分类结果
+          total_added = 0
+          changed = False
 
+          # === 写入 Baa_Agent.yaml ===
+          if agent_rules or uncategorized:
+              with open(AGENT_FILE, "r", encoding="utf-8") as f:
+                  content = f.read()
+
+              insert_lines = []
+              insert_lines.append("\n# =============================================================================\n")
+              insert_lines.append(f"# 自动同步 ({datetime.now().strftime('%Y-%m-%d %H:%M')}) - AI 核心规则\n")
+              insert_lines.append("# =============================================================================\n\n")
+
+              for cat, rules in sorted(agent_rules.items()):
+                  if rules:
+                      insert_lines.append(f"# >> {cat}\n")
+                      for r in rules:
+                          insert_lines.append(f"  - {r}\n")
+                      insert_lines.append("\n")
+
+              if uncategorized:
+                  insert_lines.append(f"# >> 未分类 ({len(uncategorized)})\n")
+                  for r in uncategorized:
+                      insert_lines.append(f"  - {r}\n")
+                  insert_lines.append("\n")
+
+              with open(AGENT_FILE, "a", encoding="utf-8") as f:
+                  f.writelines(insert_lines)
+
+              agent_count = sum(len(v) for v in agent_rules.values()) + len(uncategorized)
+              print(f">>> Baa_Agent.yaml: +{agent_count} 条")
+              total_added += agent_count
+              changed = True
+
+          # === 写入 Baa_USA.yaml ===
+          if usa_rules:
+              with open(USA_FILE, "r", encoding="utf-8") as f:
+                  content = f.read()
+
+              insert_lines = []
+              insert_lines.append("\n# =============================================================================\n")
+              insert_lines.append(f"# 自动同步 ({datetime.now().strftime('%Y-%m-%d %H:%M')}) - 国外服务补充\n")
+              insert_lines.append("# =============================================================================\n\n")
+
+              for cat, rules in sorted(usa_rules.items()):
+                  if rules:
+                      insert_lines.append(f"# >> {cat}\n")
+                      for r in rules:
+                          insert_lines.append(f"  - {r}\n")
+                      insert_lines.append("\n")
+
+              with open(USA_FILE, "a", encoding="utf-8") as f:
+                  f.writelines(insert_lines)
+
+              usa_count = sum(len(v) for v in usa_rules.values())
+              print(f">>> Baa_USA.yaml: +{usa_count} 条")
+              total_added += usa_count
+              changed = True
+
+          if skipped:
+              print(f">>> 已跳过 {len(skipped)} 条 (NTP/时间服务器):")
+              for r in skipped[:10]:
+                  print(f"    ~ {r}")
+              if len(skipped) > 10:
+                  print(f"    ... 等共 {len(skipped)} 条")
+
+          print(f"\n>>> 总计新增: {total_added} 条规则")
           PYEOF
 
       - name: Check Changes
