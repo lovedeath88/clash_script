@@ -142,7 +142,7 @@ payload:
   - DOMAIN-WILDCARD,antigravity-auto-updater-*.us-central*.run.app #自动更新通配
   - DOMAIN-WILDCARD,encrypted-tbn*.gstatic.com #加密TBN通配
   - DOMAIN-WILDCARD,lcontent-*.googleapis.com #Lcontent通配
-  - URL-REGEX,https://www\.google\.com/.*continue=https://gemini\.google\.com.+ #Gemini防火墙正则
+  - URL-REGEX,https://www\.google\.com/.*continue=https://gemini\.google\.com.+ #Gemini防火墙正则 # HTTP 429修复
 
 # > Google DeepMind
   - DOMAIN-SUFFIX,deepmind.com #DeepMind
