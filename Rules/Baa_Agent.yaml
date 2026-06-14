@@ -667,3 +667,102 @@ payload:
   - IP-CIDR6,2001:67c:21bc:1e::123/128,no-resolve #AI服务IPv6
   - IP-CIDR6,2606:4700:f1::123/128,no-resolve #AI服务IPv6
   - IP-CIDR6,2a03:8600::cc/128,no-resolve #AI服务IPv6
+
+# =============================================================================
+# 自动同步 (2026-06-14 16:47) - AI 核心规则
+# =============================================================================
+
+# >> coze_cici_bytedance
+  - DOMAIN,coze.com
+  - DOMAIN,mssdk-i18n-sg.coze.com
+  - DOMAIN,mssdk-i18n-va.coze.com
+
+# >> dev_tools_ide_browser
+  - DOMAIN, devv.featurebase.app
+  - DOMAIN-SUFFIX, devv.ai
+  - DOMAIN-SUFFIX,strawberrybucket.xyz
+
+# >> google_gemini
+  - DOMAIN-SUFFIX,opal.google
+
+# >> microsoft_copilot_azure
+  - DOMAIN,copilot.cloud.microsoft
+  - DOMAIN,copilotstudio.microsoft.com
+  - DOMAIN,m365copilot.com
+
+# >> openai_chatgpt
+  - DOMAIN,chatgpt.livekit.cloud
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN-KEYWORD,openaiapi
+
+# >> 未分类 (69)
+  - DOMAIN,copilot.microsoft.com
+  - DOMAIN,ntp-b.nist.gov
+  - DOMAIN,ntp-c.colorado.edu
+  - DOMAIN,ntp-d.nist.gov
+  - DOMAIN,ntp-wwv.nist.gov
+  - DOMAIN,ntp0.ntp-servers.net
+  - DOMAIN,ntp1.aliyun.com
+  - DOMAIN,ntp1.ntp-servers.net
+  - DOMAIN,ntp1.tencent.com
+  - DOMAIN,ntp2.aliyun.com
+  - DOMAIN,ntp2.ntp-servers.net
+  - DOMAIN,ntp2.tencent.com
+  - DOMAIN,ntp3.aliyun.com
+  - DOMAIN,ntp3.ntp-servers.net
+  - DOMAIN,ntp3.tencent.com
+  - DOMAIN,ntp4.aliyun.com
+  - DOMAIN,ntp4.ntp-servers.net
+  - DOMAIN,ntp4.tencent.com
+  - DOMAIN,ntp5.aliyun.com
+  - DOMAIN,ntp5.ntp-servers.net
+  - DOMAIN,ntp5.tencent.com
+  - DOMAIN,ntp6.aliyun.com
+  - DOMAIN,ntp6.ntp-servers.net
+  - DOMAIN,ntp7.aliyun.com
+  - DOMAIN,ntp7.ntp-servers.net
+  - DOMAIN,time-a-b.nist.gov
+  - DOMAIN,time-a-g.nist.gov
+  - DOMAIN,time-a-wwv.nist.gov
+  - DOMAIN,time-b-b.nist.gov
+  - DOMAIN,time-b-g.nist.gov
+  - DOMAIN,time-b-wwv.nist.gov
+  - DOMAIN,time-c-b.nist.gov
+  - DOMAIN,time-c-g.nist.gov
+  - DOMAIN,time-c-wwv.nist.gov
+  - DOMAIN,time-d-b.nist.gov
+  - DOMAIN,time-d-g.nist.gov
+  - DOMAIN,time-d-wwv.nist.gov
+  - DOMAIN,time-e-b.nist.gov
+  - DOMAIN,time-e-g.nist.gov
+  - DOMAIN,time-e-wwv.nist.gov
+  - DOMAIN,time1.facebook.com
+  - DOMAIN,time1.google.com
+  - DOMAIN,time2.facebook.com
+  - DOMAIN,time2.google.com
+  - DOMAIN,time3.facebook.com
+  - DOMAIN,time3.google.com
+  - DOMAIN,time4.facebook.com
+  - DOMAIN,time4.google.com
+  - DOMAIN,time5.facebook.com
+  - DOMAIN-SUFFIX,ats1.e-timing.ne.jp
+  - DOMAIN-SUFFIX,ntp-os01.ocn.ad.jp
+  - DOMAIN-SUFFIX,ntp-tk01.ocn.ad.jp
+  - DOMAIN-SUFFIX,ntp-tk02.ocn.ad.jp
+  - DOMAIN-SUFFIX,ntp0.ring.gr.jp
+  - DOMAIN-SUFFIX,ntp1.jst.mfeed.ad.jp
+  - DOMAIN-SUFFIX,ntp1.plala.or.jp
+  - DOMAIN-SUFFIX,ntp1.ring.gr.jp
+  - DOMAIN-SUFFIX,ntp1.tohoku.ac.jp
+  - DOMAIN-SUFFIX,ntp1.v6.mfeed.ad.jp
+  - DOMAIN-SUFFIX,ntp1.wakwak.com
+  - DOMAIN-SUFFIX,ntp2.jst.mfeed.ad.jp
+  - DOMAIN-SUFFIX,ntp2.plala.or.jp
+  - DOMAIN-SUFFIX,ntp2.ring.gr.jp
+  - DOMAIN-SUFFIX,ntp2.tohoku.ac.jp
+  - DOMAIN-SUFFIX,ntp2.v6.mfeed.ad.jp
+  - DOMAIN-SUFFIX,ntp2.wakwak.com
+  - DOMAIN-SUFFIX,ntp3.jst.mfeed.ad.jp
+  - DOMAIN-SUFFIX,ntp3.v6.mfeed.ad.jp
+  - IP-CIDR,17.253.4.125/32
+

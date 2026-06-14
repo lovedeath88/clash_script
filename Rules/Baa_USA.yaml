@@ -145,3 +145,11 @@ payload:
   - DOMAIN-SUFFIX,diabrowser.com #Dia浏览器主域名
   - DOMAIN,dia-blocklists-release.diabrowser.engineering #Dia广告拦截
 
+
+# =============================================================================
+# 自动同步 (2026-06-14 16:47) - 国外服务补充
+# =============================================================================
+
+# >> usa_adobe_subdomain
+  - DOMAIN-SUFFIX,senseicore.adobe.io
+
