@@ -1,0 +1,114 @@
+name: Sync AI Rules
+
+on:
+  schedule:
+    # 每天 UTC 2:00（北京时间 10:00）检查一次
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download & Merge Rules
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request
+          import re
+          import os
+          from datetime import datetime
+
+          # ====== 配置 ======
+          REMOTE_URL = "https://raw.githubusercontent.com/shangrenxi/Rules/refs/heads/master/rules/AI.list"
+          RULE_FILES = [
+              "Rules/Baa_Agent.yaml",
+              "Rules/Baa_USA.yaml",
+              "Rules/Baa_CN.yaml",
+          ]
+          TARGET_FILE = "Rules/Baa_Agent.yaml"
+          # ==================
+
+          print(">>> 下载远程 AI.list ...")
+          req = urllib.request.Request(REMOTE_URL, headers={"User-Agent": "Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              remote_content = resp.read().decode("utf-8")
+
+          # 解析远程规则（去掉注释和空行）
+          remote_rules = set()
+          for line in remote_content.splitlines():
+              line = line.strip()
+              if not line or line.startswith("#"):
+                  continue
+              remote_rules.add(line)
+
+          print(f">>> 远程共 {len(remote_rules)} 条规则")
+
+          # 解析所有本地规则文件中的已有规则
+          all_local_rules = set()
+          for fpath in RULE_FILES:
+              if os.path.exists(fpath):
+                  with open(fpath, "r", encoding="utf-8") as f:
+                      content = f.read()
+                  # 提取 payload 下的每条规则
+                  for m in re.finditer(r"^  - (.+)$", content, re.MULTILINE):
+                      rule = m.group(1).split("#")[0].strip()  # 去掉注释部分
+                      if rule:
+                          all_local_rules.add(rule)
+
+          print(f">>> 本地三个文件共 {len(all_local_rules)} 条规则")
+
+          # 找出缺失的规则
+          missing = sorted(remote_rules - all_local_rules)
+
+          if not missing:
+              print(">>> 没有新规则，无需更新")
+              exit(0)
+
+          print(f">>> 发现 {len(missing)} 条新规则，正在合并到 {TARGET_FILE} ...")
+
+          # 读取目标文件并追加
+          with open(TARGET_FILE, "r", encoding="utf-8") as f:
+              lines = f.readlines()
+
+          # 在文件末尾追加新规则
+          new_lines = []
+          new_lines.append("\n")
+          new_lines.append(f"# >> 自动同步 ({datetime.now().strftime('%Y-%m-%d')})\n")
+          for rule in missing:
+              new_lines.append(f"  - {rule}\n")
+
+          with open(TARGET_FILE, "a", encoding="utf-8") as f:
+              f.writelines(new_lines)
+
+          print(f">>> 已追加 {len(missing)} 条新规则:")
+          for r in missing:
+              print(f"    + {r}")
+
+          PYEOF
+
+      - name: Check Changes
+        id: check
+        run: |
+          git diff --quiet Rules/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit & Push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Rules/
+          git commit -m "chore(rules): 自动同步 AI.list 新增规则"
+          git push
