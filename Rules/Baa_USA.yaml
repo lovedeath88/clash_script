@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,girigirilove.com #giri番剧
 # > 国外游戏
   - DOMAIN-SUFFIX,klei.com #科雷游戏
+  - DOMAIN-SUFFIX,kleientertainment.com #科雷娱乐
   - DOMAIN-SUFFIX,anno1800.modhub.io #纪元1800
   - PROCESS-NAME,Anno1800.exe #纪元1800
 # >> 直播平台
