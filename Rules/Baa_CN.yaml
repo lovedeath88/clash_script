@@ -197,7 +197,6 @@ payload:
   - DOMAIN-SUFFIX,blcay.ai #帕拉图
   - DOMAIN-SUFFIX,jinkundong.store #GragonAPI
   - DOMAIN-KEYWORD,sillydream #sillydream
-  - DOMAIN-SUFFIX,aisz.mom #词元
 
 # >> 自定义/拦截站点
   - DOMAIN-SUFFIX,haodanku.com #好单库（返利/导购）
