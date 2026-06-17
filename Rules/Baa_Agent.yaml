@@ -2,7 +2,14 @@ payload:
 # =============================================================================
 # AI 对话/助手
 # =============================================================================
-
+# > Trae
+  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
+  - DOMAIN-SUFFIX,api.trae.cn #Trae API
+  - DOMAIN-SUFFIX,api.trae.com.cn #Trae API中国
+  - DOMAIN-SUFFIX,pc-mon.zijieapi.com #Trae监控
+  - DOMAIN-SUFFIX,frontier.zijieapi.com #Trae前沿
+  - DOMAIN-SUFFIX,api5-normal.mchost.guru #Trae API备用
+  - DOMAIN-SUFFIX,trae-ws-cn.mchost.guru #Trae WebSocket
 # > OpenAI
   - DOMAIN-SUFFIX,chatgpt.com #ChatGPT
   - DOMAIN-SUFFIX,chat.openai.com #ChatGPT网页版
