@@ -160,7 +160,6 @@ payload:
   - PROCESS-NAME,baidunetdiskhost.exe #百度云盘
 
 # > 国内编程相关
-  - PROCESS-NAME,Trae CN.exe #Trae CN.exe
   - PROCESS-NAME,TRAE SOLO CN.exe #TRAE SOLO CN.exe
   - PROCESS-NAME,Qoder.exe #Qoder.exe
   - PROCESS-NAME,CodeBuddy CN.exe #CodeBuddy CN.exe
