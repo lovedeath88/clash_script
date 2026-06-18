@@ -2,6 +2,7 @@ function main(config) {
 
   // ====================== 基础配置 ======================
   config["ipv6"] = false;
+  config["mixed-port"] = 7897;
   config["global-client-fingerprint"] = "chrome";
   config["geodata-mode"] = true;
 

@@ -3,6 +3,7 @@ import yaml from 'js-yaml';
 function main(config) {
 
   config["ipv6"] = false;
+  config["mixed-port"] = 7897;
   config["global-client-fingerprint"] = "chrome";
   config["geodata-mode"] = true;
 
