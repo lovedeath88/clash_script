@@ -38,7 +38,6 @@ payload:
 # > 中转API平台
   - DOMAIN-SUFFIX,t8star.org #贞贞
   - DOMAIN-SUFFIX,comfly.org #comfly
-  - DOMAIN-SUFFIX,aisz.mom #词元
 # >> 容器镜像仓库
   - DOMAIN-SUFFIX,docker.com #Docker容器平台
   - DOMAIN-SUFFIX,docker.io #Docker镜像仓库
