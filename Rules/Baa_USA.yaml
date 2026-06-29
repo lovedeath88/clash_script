@@ -14,8 +14,6 @@ payload:
   - DOMAIN-SUFFIX,bangumi.moe #萌番组
   - DOMAIN-SUFFIX,kisssub.org #爱恋动漫
   - DOMAIN-SUFFIX,share.dmhy.org #动漫花园
-  - DOMAIN-SUFFIX,acg.rip #ACG动漫
-  - DOMAIN-SUFFIX,girigirilove.com #giri番剧
 # > 国外游戏
   - DOMAIN-SUFFIX,klei.com #科雷游戏
   - DOMAIN-SUFFIX,kleientertainment.com #科雷娱乐
