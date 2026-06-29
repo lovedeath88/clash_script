@@ -94,7 +94,7 @@ function main(config) {
       "name": "番剧分流",
       "type": "select",
       "proxies": ["关闭代理", "🇭🇰香港测速⚡", "🇹🇼台湾测速⚡"],
-      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/bilibili.png"
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/master/icon/Fallback.png"
     },
     {
       ...groupBaseOption,
