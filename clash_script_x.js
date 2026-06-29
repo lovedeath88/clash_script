@@ -91,6 +91,13 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "番剧分流",
+      "type": "select",
+      "proxies": ["关闭代理", "🇭🇰香港测速⚡", "🇹🇼台湾测速⚡"],
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/bilibili.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "国内_Game",
       "type": "select",
       "proxies": ["关闭代理", "开启代理"],
@@ -330,6 +337,12 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_System.yaml",
       "path": "./Rules/Baa_System.yaml"
     },
+    "Baa_Final": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_Final.yaml",
+      "path": "./Rules/Baa_Final.yaml"
+    },
   };
 
   // 规则列表（按优先级排序）
@@ -355,6 +368,7 @@ function main(config) {
     "GEOIP,LAN,关闭代理,no-resolve",
     "GEOSITE,CN,关闭代理,no-resolve",
     "GEOIP,CN,关闭代理",
+    "RULE-SET,Baa_Final,番剧分流",
     "AND,((NETWORK,UDP),(DST-PORT,443)),REJECT",
     "MATCH,黑白名单"
   ];
