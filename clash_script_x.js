@@ -58,7 +58,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "开启代理",
       "type": "select",
-      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
+      "proxies": ["DIRECT", "🇭🇰香港轮转🔁", "🇺🇸美国轮转🔁", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Airport.png"
     },
     {
@@ -127,6 +127,24 @@ function main(config) {
       "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/icon/Select.png"
     },
     // 自动选择代理组（隐藏，仅用于分流）
+    {
+      ...groupBaseOption,
+      "name": "🇭🇰香港轮转🔁",
+      "type": "fallback",
+      "interval": 30,
+      "lazy": false,
+      "include-all": true,
+      "filter": "(?i)^(?=.*(?:HK|hk|🇭🇰|hongkong|港)).*$"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇺🇸美国轮转🔁",
+      "type": "fallback",
+      "interval": 30,
+      "lazy": false,
+      "include-all": true,
+      "filter": "(?i)^(?=.*(?:US|us|🇺🇸|America|美国)).*$"
+    },
     {
       ...groupBaseOption,
       "name": "🇭🇰香港测速⚡",

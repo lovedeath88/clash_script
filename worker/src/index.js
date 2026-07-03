@@ -43,7 +43,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "开启代理",
       "type": "select",
-      "proxies": ["DIRECT", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
+      "proxies": ["DIRECT", "🇭🇰香港轮转🔁", "🇺🇸美国轮转🔁", "🇭🇰香港测速⚡", "🇭🇰香港手动", "🇯🇵日本测速⚡", "🇯🇵日本手动", "🇰🇷韩国测速⚡", "🇺🇸美国测速⚡", "🇺🇸美国手动", "🇸🇬新加坡测速⚡", "🇹🇼台湾测速⚡", "🇹🇼台湾手动"],
       "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Airport.png"
     },
     {
@@ -76,6 +76,13 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "番剧分流",
+      "type": "select",
+      "proxies": ["关闭代理", "🇭🇰香港测速⚡", "🇹🇼台湾测速⚡"],
+      "icon": "https://raw.githubusercontent.com/lovedeath88/clash_script/refs/heads/master/icon/Fallback.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "国内_Game",
       "type": "select",
       "proxies": ["关闭代理", "开启代理"],
@@ -103,6 +110,24 @@ function main(config) {
       "type": "select",
       "proxies": ["开启代理", "关闭代理", "🇭🇰香港测速⚡"],
       "icon": "https://github.com/Aworld00/Clash_Parsers/raw/master/Icon/Select.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇭🇰香港轮转🔁",
+      "type": "fallback",
+      "interval": 30,
+      "lazy": false,
+      "include-all": true,
+      "filter": "(?i)^(?=.*(?:HK|hk|🇭🇰|hongkong|港))(?!.*(?:倍|流量|x)).*$"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇺🇸美国轮转🔁",
+      "type": "fallback",
+      "interval": 30,
+      "lazy": false,
+      "include-all": true,
+      "filter": "(?i)^(?=.*(?:US|us|🇺🇸|America|美国))(?!.*(?:倍|流量|x)).*$"
     },
     {
       ...groupBaseOption,
@@ -304,6 +329,12 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_System.yaml",
       "path": "./Rules/Baa_System.yaml"
     },
+    "Baa_Final": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/lovedeath88/clash_script/master/Rules/Baa_Final.yaml",
+      "path": "./Rules/Baa_Final.yaml"
+    },
   };
 
   const rules = [
@@ -328,6 +359,7 @@ function main(config) {
     "GEOIP,LAN,关闭代理,no-resolve",
     "GEOSITE,CN,关闭代理,no-resolve",
     "GEOIP,CN,关闭代理",
+    "RULE-SET,Baa_Final,番剧分流",
     "MATCH,黑白名单"
   ];
 
