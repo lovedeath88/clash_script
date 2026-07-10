@@ -152,3 +152,11 @@ payload:
 # >> usa_adobe_subdomain
   - DOMAIN-SUFFIX,senseicore.adobe.io
 
+
+# =============================================================================
+# 自动同步 (2026-07-10 06:10) - 国外服务补充
+# =============================================================================
+
+# >> usa_infra_cdns_payment
+  - DOMAIN-SUFFIX,gateway.ai.cloudflare.com
+

@@ -770,3 +770,33 @@ payload:
   - DOMAIN-SUFFIX,ntp3.v6.mfeed.ad.jp
   - IP-CIDR,17.253.4.125/32
 
+
+# =============================================================================
+# 自动同步 (2026-07-10 06:10) - AI 核心规则
+# =============================================================================
+
+# >> anthropic_claude
+  - DOMAIN-SUFFIX,browser-intake-datadoghq.com
+  - DOMAIN-WILDCARD,*-datadoghq.com
+
+# >> dev_tools_ide_browser
+  - DOMAIN-SUFFIX, devv.ai
+
+# >> google_gemini
+  - DOMAIN-SUFFIX,aicode.googleapis.com
+  - DOMAIN-SUFFIX,gemini.gstatic.com
+  - DOMAIN-WILDCARD,antigravity*.us-central*.run.app
+
+# >> mistral_perplexity_poe_xai
+  - DOMAIN, api.hyperbolic.xyz
+  - DOMAIN-SUFFIX, hyperbolic.ai
+
+# >> openai_chatgpt
+  - DOMAIN,openaicom.imgix.net
+  - DOMAIN-SUFFIX,chatgpt.site
+  - DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+
+# >> 未分类 (2)
+  - DOMAIN,ppl-ai-file-upload.s3.amazonaws.com
+  - DOMAIN-WILDCARD,copilot*.githubusercontent.com
+
