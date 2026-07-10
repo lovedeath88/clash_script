@@ -3,6 +3,8 @@ function main(config) {
   // ====================== 基础配置 ======================
   config["ipv6"] = false;
   config["mixed-port"] = 7897;
+  // 启用进程识别，确保桌面端 Codex/ChatGPT 流量命中 AI 规则集。
+  config["find-process-mode"] = "strict";
   config["global-client-fingerprint"] = "chrome";
   config["geodata-mode"] = true;
 
