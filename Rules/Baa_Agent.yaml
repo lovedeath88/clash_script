@@ -4,7 +4,11 @@ payload:
 # =============================================================================
 
 # > OpenAI
+  - PROCESS-NAME,Codex.exe #OpenAI Codex
+  - PROCESS-NAME,ChatGPT.exe #ChatGPT/Codex桌面端
   - DOMAIN-SUFFIX,chatgpt.com #ChatGPT
+  - DOMAIN-SUFFIX,api.openai.com #OpenAI API
+  - DOMAIN-SUFFIX,auth.openai.com #OpenAI认证
   - DOMAIN-SUFFIX,chat.openai.com #ChatGPT网页版
   - DOMAIN-SUFFIX,openai.com #OpenAI官网
   - DOMAIN-SUFFIX,platform.openai.com #OpenAI平台
@@ -226,8 +230,8 @@ payload:
   - DOMAIN-SUFFIX,perplexity.ai #Perplexity AI
   - DOMAIN-SUFFIX,pplx.ai #PPLX
   - DOMAIN,console.mistral.ai #Mistral控制台
-  - DOMAIN, api.hyperbolic.xyz #Hyperbolic API
-  - DOMAIN-SUFFIX, hyperbolic.ai #Hyperbolic AI
+  - DOMAIN,api.hyperbolic.xyz #Hyperbolic API
+  - DOMAIN-SUFFIX,hyperbolic.ai #Hyperbolic AI
 
 # > Twitter / X
   - DOMAIN-SUFFIX,x.com #X平台
@@ -678,8 +682,8 @@ payload:
   - DOMAIN,mssdk-i18n-va.coze.com
 
 # >> dev_tools_ide_browser
-  - DOMAIN, devv.featurebase.app
-  - DOMAIN-SUFFIX, devv.ai
+  - DOMAIN,devv.featurebase.app
+  - DOMAIN-SUFFIX,devv.ai
   - DOMAIN-SUFFIX,strawberrybucket.xyz
 
 # >> google_gemini

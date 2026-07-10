@@ -84,7 +84,6 @@ payload:
   - PROCESS-NAME,git-bash.exe #Git Bash
   - PROCESS-NAME,git-cmd.exe #Git CMD
   - PROCESS-NAME,git-gui.exe #Git GUI
-  - PROCESS-NAME,Codex.exe #OpenAI Codex
   - PROCESS-NAME,python.exe #Python
   - PROCESS-NAME,node.exe #Node.js
   - PROCESS-NAME,Code.exe #VS Code
