@@ -800,3 +800,11 @@ payload:
   - DOMAIN,ppl-ai-file-upload.s3.amazonaws.com
   - DOMAIN-WILDCARD,copilot*.githubusercontent.com
 
+
+# =============================================================================
+# 自动同步 (2026-08-04 05:19) - AI 核心规则
+# =============================================================================
+
+# >> 未分类 (1)
+  - DOMAIN-SUFFIX,thebrowser.company
+
