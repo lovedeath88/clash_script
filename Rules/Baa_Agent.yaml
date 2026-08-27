@@ -808,3 +808,19 @@ payload:
 # >> 未分类 (1)
   - DOMAIN-SUFFIX,thebrowser.company
 
+
+# =============================================================================
+# 自动同步 (2026-08-27 12:39) - AI 核心规则
+# =============================================================================
+
+# >> google_gemini
+  - DOMAIN-SUFFIX,userlocations.googleapis.com
+
+# >> openai_chatgpt
+  - DOMAIN-SUFFIX,oaistatsig.com
+
+# >> 未分类 (3)
+  - DOMAIN,cp4.cloudflare.com
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN-SUFFIX,apple-dns.net
+
